@@ -4,6 +4,7 @@
 /node_modules
 /.pnp
 .pnp.js
+.prettierignore
 
 # testing
 /coverage
@@ -26,6 +27,7 @@ yarn-error.log*
 .pnpm-debug.log*
 
 # local env files
+.env
 .env*.local
 
 # vercel
