@@ -1,6 +1,7 @@
 type NameToType = {
   readonly ENV: 'production' | 'staging' | 'development' | 'test'
   readonly NEXTAUTH_URL: string
+  readonly NEXT_PUBLIC_URL: string
   readonly NODE_ENV: 'production' | 'development'
   readonly DATABASE_URL: string
   readonly GOOGLE_SECRET: string

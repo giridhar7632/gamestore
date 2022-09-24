@@ -8,6 +8,7 @@ specifiers:
   '@types/react': 18.0.21
   '@types/react-dom': 18.0.6
   '@typescript-eslint/eslint-plugin': ^5.38.0
+  bcryptjs: ^2.4.3
   clsx: ^1.2.1
   eslint: 8.23.1
   eslint-config-next: 12.3.1
@@ -31,6 +32,7 @@ dependencies:
   '@next-auth/prisma-adapter': 1.0.4_bwhncj256yar2zz55r2fl3abo4
   '@prisma/client': 4.3.1_prisma@4.3.1
   '@tanstack/react-query': 4.4.0_biqbaboplfbrettd7655fr4n2y
+  bcryptjs: 2.4.3
   clsx: 1.2.1
   framer-motion: 7.3.6_biqbaboplfbrettd7655fr4n2y
   next: 12.3.1_2mygebwfgdyopr3fy2qddu2eli
@@ -918,6 +920,13 @@ packages:
         integrity: sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==,
       }
     dev: true
+
+  /bcryptjs/2.4.3:
+    resolution:
+      {
+        integrity: sha512-V/Hy/X9Vt7f3BbPJEi8BdVFMByHi+jNXrYkW3huaybV/kQ0KJg0Y6PkEMbn+zeT+i+SiKZ/HMqJGIIt4LZDqNQ==,
+      }
+    dev: false
 
   /binary-extensions/2.2.0:
     resolution:

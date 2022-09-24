@@ -17,6 +17,14 @@ model Order {
   User   User?   @relation(fields: [userId], references: [id])
 }
 
+model Liked {
+  id     String  @id @default(cuid())
+  title  String
+  price  Float?
+  userId String?
+  User   User?   @relation(fields: [userId], references: [id])
+}
+
 model Account {
   id                 String  @id @default(cuid())
   userId             String  @map("user_id")
@@ -53,6 +61,7 @@ model User {
   emailVerified DateTime?
   image         String?
   orders        Order[]
+  wishlist      Liked[]
   accounts      Account[]
   sessions      Session[]
 }

@@ -3,6 +3,7 @@ import { motion } from 'framer-motion'
 import type { AppProps } from 'next/app'
 import { Hydrate, QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import '../styles/globals.scss'
+import Meta from '../components/Meta'
 
 export default function App({ Component, pageProps, router }: AppProps) {
   const [queryClient] = useState(() => new QueryClient())
@@ -22,6 +23,7 @@ export default function App({ Component, pageProps, router }: AppProps) {
             },
           }}
         >
+          <Meta />
           <Component key={router.route} {...pageProps} />
         </motion.div>
       </Hydrate>
