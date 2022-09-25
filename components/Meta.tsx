@@ -1,6 +1,5 @@
 import React from 'react'
 import Head from 'next/head'
-import { getEnv } from '../utils/env'
 
 const makeTitle = (title: string, name: string) =>
   title === name || !name ? title : `${title} | ${name}`
@@ -20,7 +19,7 @@ const Meta: React.FC<MetaProps> = ({
   name = '',
   description = 'A place to buy amazing games for different platforms at best prices in the world.',
   image = `/og-image`,
-  url = getEnv('NEXT_PUBLIC_URL'),
+  url = 'http://localhost',
   keywords = 'playstation,ecommerce,games',
   children,
 }) => (
