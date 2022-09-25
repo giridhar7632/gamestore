@@ -1,0 +1,92 @@
+$color-primary: #0072ce;
+$color-white: #f5f5f5;
+$color-black: #111;
+$color-gray: #c4c4c4;
+$color-border: #383838;
+
+@mixin button {
+  transition: all 0.2s ease-in;
+  border-radius: 12px;
+  padding: 8px 32px;
+  font-weight: 700;
+  width: fit-content;
+
+  cursor: pointer;
+  border: none;
+  color: $color-white;
+
+  font-size: 14px;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: bold;
+
+  &:disabled {
+    opacity: 0.6;
+  }
+}
+
+@mixin button-primary {
+  background-color: $color-primary;
+  filter: drop-shadow(0px 0px 5px $color-primary);
+
+  &:hover {
+    filter: drop-shadow(0px 0px 10px $color-primary);
+  }
+
+  &:disabled {
+    background-color: $color-primary;
+    filter: none;
+  }
+}
+
+@mixin button-secondary {
+  background: rgba(245, 245, 245, 0.25);
+  backdrop-filter: blur(16px);
+  filter: drop-shadow(0px 0px 5px rgba(245, 245, 245, 0.25));
+
+  &:hover {
+    filter: drop-shadow(0px 0px 10px rgba(245, 245, 245, 0.25));
+  }
+}
+
+@mixin full-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  max-width: 1920px;
+  max-height: 1080px;
+  width: 100vw;
+  overflow: hidden;
+}
+
+@mixin gradient-overlay {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  background: linear-gradient(to top, $color-black, transparent);
+}
+
+@mixin mobile {
+  @media only screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media only screen and (min-width: 768px) and (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: 1024px) {
+    @content;
+  }
+}

@@ -1,0 +1,166 @@
+@use './variables' as *;
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+
+  border: 1px solid rgba(150, 150, 150, 0.35);
+  border-radius: 24px;
+  max-width: 558px;
+  margin: auto;
+
+  @include mobile {
+    border: none;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 32px;
+}
+
+.formHeader {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: $color-black;
+
+  h2 {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 48px;
+    font-family: 'Ubuntu', sans-serif;
+    margin: 5px auto;
+  }
+
+  p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    margin: 0;
+  }
+}
+
+.input {
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+
+  width: 100%;
+  max-width: 478px;
+}
+
+.label {
+  width: 100%;
+  font-size: 14px;
+  line-height: 100%;
+  color: #666666;
+  padding: 0 16px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .eye {
+    display: flex;
+    align-items: center;
+    min-width: 65px;
+
+    cursor: pointer;
+  }
+}
+
+.inputElement {
+  box-sizing: border-box;
+  width: 100%;
+  border: 1px solid rgba(102, 102, 102, 0.35);
+  border-radius: 12px;
+  padding: 8px 16px;
+  font-size: 16px;
+  font-weight: 500;
+  color: $color-black;
+  background: transparent;
+  outline: none;
+
+  &:focus {
+    outline: 2px solid rgba(0, 114, 206, 0.4);
+    border: 1px solid rgba(0, 114, 206, 0.4);
+  }
+
+  &::placeholder {
+    color: #666666;
+  }
+}
+
+.btn {
+  @include button;
+  width: 100%;
+  max-width: 478px;
+  box-sizing: border-box;
+  border-radius: 999px;
+  font-size: 16px;
+  margin: 5px 0;
+
+  &.primary {
+    @include button-primary;
+  }
+
+  &.outlined {
+    @include button-secondary;
+    border: 1px solid rgb(150, 150, 150, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $color-black;
+    font-weight: 500;
+  }
+
+  &:disabled {
+    background: #cccccc;
+    opacity: 0.6;
+  }
+}
+
+.error {
+  color: #ed1c50;
+  font-size: 12px;
+  line-height: 100%;
+  padding: 0 16px;
+  margin: 4px 0 0 0;
+}
+
+.separator {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  max-width: 478px;
+  margin: 20px auto;
+
+  .stroke {
+    width: 40%;
+    height: 1px;
+    background-color: rgb(150, 150, 150, 0.2);
+  }
+
+  .text {
+    font-size: 14px;
+    line-height: 100%;
+    color: $color-black;
+    margin: 0 5px;
+  }
+}
