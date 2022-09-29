@@ -1,10 +1,10 @@
-import React from 'react'
+import React, { FC } from 'react'
 import Head from 'next/head'
 
 const makeTitle = (title: string, name: string) =>
   title === name || !name ? title : `${title} | ${name}`
 
-type MetaProps = {
+export type MetaProps = {
   title?: string
   name?: string
   description?: string
@@ -14,12 +14,12 @@ type MetaProps = {
   children?: React.ReactNode
 }
 
-const Meta: React.FC<MetaProps> = ({
+const Meta: FC<MetaProps> = ({
   title = 'Game store',
   name = '',
   description = 'A place to buy amazing games for different platforms at best prices in the world.',
   image = `/og-image`,
-  url = 'http://localhost',
+  url = 'http://localhost:3000',
   keywords = 'playstation,ecommerce,games',
   children,
 }) => (

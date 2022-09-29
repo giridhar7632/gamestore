@@ -1,0 +1,51 @@
+import { Game, gamesData } from './types'
+
+export function formatGamesData(data): gamesData {
+  return {
+    prev: data.previous,
+    next: data.next,
+    games:
+      data?.results?.map((game) => ({
+        id: game.id,
+        backgroundImage: game.background_image,
+        title: game.name,
+        slug: game.slug,
+        genres: game?.genres
+          .slice(0, 3)
+          .map(({ id, name, slug, games_count, image_background }) => ({
+            id,
+            name,
+            slug,
+            games_count,
+            image_background,
+          })),
+        price: game.id < 100 ? game.id : parseInt(`${game.id}`.slice(0, 4)) / 100,
+        rating: game.rating,
+        ratings_count: game.ratings_count,
+      })) || [],
+  }
+}
+
+export function formatSingleGame(game): Game {
+  return {
+    title: game.name,
+    slug: game.slug,
+    description: game.description,
+    description_raw: game.description_raw,
+    backgroundImage: game.background_image,
+    genres: game?.genres.map(({ id, name, slug, games_count, image_background }) => ({
+      id,
+      name,
+      slug,
+      games_count,
+      image_background,
+    })),
+    platforms: game.platforms,
+    released: game.released,
+    rating: game.rating,
+    ratings: game.ratings,
+    ratings_count: game.ratings_count,
+    officialSite: game.website,
+    extraImg: game.background_image_additional,
+  }
+}

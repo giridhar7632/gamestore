@@ -1,0 +1,19 @@
+.meter {
+  position: relative;
+  display: inline-block;
+  width: 200px;
+  height: 5px;
+  background: #f1f1f1;
+  box-shadow: inset 0 0 5px rgba(17, 17, 17, 0.2);
+  border-radius: 4px;
+  overflow: hidden;
+
+  span {
+    position: absolute;
+    left: 0;
+    height: 100%;
+    border-radius: 4px;
+    background-color: #f7c705;
+    box-shadow: 0 0 5px rgba(17, 17, 17, 0.2);
+  }
+}

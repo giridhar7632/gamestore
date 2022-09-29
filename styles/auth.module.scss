@@ -4,6 +4,7 @@
   display: flex;
   min-height: 100vh;
   background-color: $color-white;
+  color: $color-black;
 
   @include mobile {
     flex-direction: column-reverse;

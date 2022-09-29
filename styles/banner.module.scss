@@ -1,0 +1,12 @@
+@use './variables' as *;
+
+.banner {
+  width: '100%';
+  max-width: 1440px;
+  height: 424px;
+  background-image: url('/banner.png');
+
+  @include tablet {
+    height: 238.5px;
+  }
+}

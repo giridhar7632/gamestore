@@ -5,21 +5,23 @@ import GoogleProvider from 'next-auth/providers/google'
 import CredentialsProvider from 'next-auth/providers/credentials'
 import { compare } from 'bcryptjs'
 import prisma from '../../../lib/prisma'
-import { getEnv } from '../../../utils/env'
 
 const authHandler: NextApiHandler = (req, res) => NextAuth(req, res, options)
 export default authHandler
+
+console.log('GOOGLE_ID: ', process.env.GOOGLE_ID)
+console.log('GOOGLE_SECRET: ', process.env.GOOGLE_SECRET)
 
 const options: NextAuthOptions = {
   session: {
     strategy: 'jwt',
   },
   adapter: PrismaAdapter(prisma),
-  secret: getEnv('SECRET'),
+  secret: process.env.SECRET,
   providers: [
     GoogleProvider({
-      clientId: getEnv('GOOGLE_ID'),
-      clientSecret: getEnv('GOOGLE_SECRET'),
+      clientId: process.env.GOOGLE_ID,
+      clientSecret: process.env.GOOGLE_SECRET,
     }),
     CredentialsProvider({
       type: 'credentials',
@@ -37,8 +39,6 @@ const options: NextAuthOptions = {
             },
           })
 
-          console.log(user)
-
           if (!user) {
             throw new Error('User not found! Try signing up. 😕')
           }
@@ -46,8 +46,8 @@ const options: NextAuthOptions = {
           if (!user.password) {
             throw new Error(`You don't have any password! Try using Google 😅`)
           }
-          console.log(user.password, password)
-          if (!compare(user.password, password)) {
+          const isMatch = await compare(password, user.password)
+          if (!isMatch) {
             throw new Error('Incorrect Password! ⚠️')
           }
 

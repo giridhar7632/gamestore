@@ -1,0 +1,62 @@
+@use './variables' as *;
+
+.genreItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  color: $color-white;
+  border: 2px solid $color-border;
+
+  .name {
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'Ubuntu', sans-serif;
+    line-height: 100%;
+    margin: auto;
+  }
+
+  .count {
+    align-content: flex-end;
+    font-size: 14px;
+    line-height: 100%;
+  }
+}
+
+.genresContainer {
+  border-radius: 1rem;
+
+  .genreItem {
+    min-width: 200px;
+    height: 100px;
+    margin: 0 10px;
+  }
+}
+
+.genresFlexContainer {
+  width: 100%;
+  display: flex;
+  // align-items: center;
+  align-items: stretch;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 0 auto;
+
+  @include mobile {
+    justify-content: stretch;
+  }
+
+  .genreItem {
+    height: 100px;
+    margin: 5px;
+    padding: 5px 10px;
+    border: none;
+    // width: auto;
+    flex: 1;
+  }
+}

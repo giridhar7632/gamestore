@@ -1,10 +1,10 @@
 import clsx from 'clsx'
-import React, { useState } from 'react'
+import React, { FC, useState } from 'react'
 import { FieldValues, useForm } from 'react-hook-form'
 import { Logo } from '../utils/icons'
 import classes from '../styles/Form.module.scss'
 import Input from './Input'
-import Provider from './providers'
+import Provider from './Providers'
 
 type formProps = {
   type?: string
@@ -16,7 +16,7 @@ type formProps = {
   handleProvider: (id: string) => void
 }
 
-const AuthForm: React.FC<formProps> = ({
+const AuthForm: FC<formProps> = ({
   type,
   btn,
   loading,
@@ -36,8 +36,6 @@ const AuthForm: React.FC<formProps> = ({
       onFormSubmit(data)
     },
   )
-
-  console.log(providers)
 
   return (
     <div className={classes.formContainer}>

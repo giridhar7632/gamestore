@@ -1,0 +1,44 @@
+.bg {
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-image: linear-gradient(to bottom, rgba(17, 17, 17, 0.2), rgba(17, 17, 17, 0.3)),
+    url(/auth.png);
+  background-size: cover;
+  height: 120vh;
+  width: 100vw;
+  z-index: -1;
+}
+
+.policy {
+  text-align: center;
+  max-width: 1080px;
+  margin: 5rem auto;
+
+  h2 {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 48px;
+    font-family: 'Ubuntu', sans-serif;
+    margin: 5px auto;
+  }
+
+  p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0;
+    text-align: left;
+  }
+
+  .headline {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 30px;
+    margin: 0;
+  }
+}

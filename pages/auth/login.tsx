@@ -1,15 +1,18 @@
 import { useState } from 'react'
 import { NextPage } from 'next'
+import Router from 'next/router'
 import toast from 'react-hot-toast'
 import { FieldValues } from 'react-hook-form'
 import { AnimatePresence, motion } from 'framer-motion'
 import AuthForm from '../../components/AuthForm'
-import Meta from '../../components/Meta'
 import classes from '../../styles/auth.module.scss'
-import { getProviders, getSession, signIn } from 'next-auth/react'
-import Router from 'next/router'
+import { useAuth } from '../../lib/hooks/useAuth'
+import { fetcher } from '../../utils/fetcher'
+import Meta from '../../layout/Meta'
+import { getProviders, getSession } from 'next-auth/react'
 
-const Login: NextPage = ({ providers, ...props }): JSX.Element => {
+const Login: NextPage = ({ providers }: any): JSX.Element => {
+  const { signIn } = useAuth()
   const [signin, setSignin] = useState(true)
   const [loading, setLoading] = useState(false)
   const handleCredentials = async (data: FieldValues) => {
@@ -18,18 +21,31 @@ const Login: NextPage = ({ providers, ...props }): JSX.Element => {
       ...data,
       redirect: false,
     })
-    console.log(res)
     if (res.ok) {
       toast.success('Sign in successful! 😁')
+      Router.replace('/')
     } else {
       toast.error(res.error)
     }
 
     setLoading(false)
-    Router.replace('/')
   }
-
-  const handleProvider = (id) => signIn(id)
+  const handleProvider = (id) => signIn(id, { callbackUrl: '/' })
+  const handleSignUp = async (data: FieldValues) => {
+    setLoading(true)
+    try {
+      const res = await fetcher('/api/auth/signup', {
+        method: 'POST',
+        body: data,
+      })
+      console.log(res)
+      toast.success('User created successfully! 😁')
+      setSignin(true)
+    } catch (error) {
+      toast.error(error?.message)
+    }
+    setLoading(false)
+  }
 
   return (
     <div className={classes.authContainer}>
@@ -45,7 +61,7 @@ const Login: NextPage = ({ providers, ...props }): JSX.Element => {
         />
       </div>
       <div className={classes.text}>
-        <AnimatePresence exitBeforeEnter initial={false}>
+        <AnimatePresence mode={'wait'} initial={false}>
           <motion.div
             key={signin ? 'signin' : 'register'}
             initial={{ y: 50, opacity: 0 }}
@@ -56,14 +72,14 @@ const Login: NextPage = ({ providers, ...props }): JSX.Element => {
             {signin ? (
               <div className={classes.info}>
                 <span>Don&apos;t have an account?</span>
-                <span className={classes.btn} onClick={() => setSignin((prev) => !prev)}>
+                <span className={classes.btn} onClick={() => setSignin(false)}>
                   Sign Up
                 </span>
               </div>
             ) : (
               <div className={classes.info}>
                 <span>Already have an account?</span>
-                <span className={classes.btn} onClick={() => setSignin((prev) => !prev)}>
+                <span className={classes.btn} onClick={() => setSignin(true)}>
                   Sign In
                 </span>
               </div>
@@ -72,7 +88,7 @@ const Login: NextPage = ({ providers, ...props }): JSX.Element => {
         </AnimatePresence>
 
         <div className={classes.formWrapper}>
-          <AnimatePresence exitBeforeEnter initial={false}>
+          <AnimatePresence mode={'wait'} initial={false}>
             <motion.div
               key={signin ? 'signin' : 'register'}
               initial={{ y: 50, opacity: 0 }}
@@ -94,7 +110,7 @@ const Login: NextPage = ({ providers, ...props }): JSX.Element => {
                 <AuthForm
                   type={'register'}
                   btn={'Sign Up'}
-                  onFormSubmit={handleCredentials}
+                  onFormSubmit={handleSignUp}
                   providers={Object.values(providers)}
                   handleProvider={handleProvider}
                   loading={loading}

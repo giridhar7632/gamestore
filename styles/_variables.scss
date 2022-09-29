@@ -3,6 +3,7 @@ $color-white: #f5f5f5;
 $color-black: #111;
 $color-gray: #c4c4c4;
 $color-border: #383838;
+$color-bg: #1f1f1f;
 
 @mixin button {
   transition: all 0.2s ease-in;
@@ -70,7 +71,7 @@ $color-border: #383838;
   right: 0;
   bottom: 0;
   width: 100%;
-  background: linear-gradient(to top, $color-black, transparent);
+  background: linear-gradient(to top, $color-bg, transparent);
 }
 
 @mixin mobile {

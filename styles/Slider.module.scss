@@ -1,0 +1,62 @@
+@use './variables' as *;
+
+.carousel {
+  overflow: hidden;
+  background-color: transparent;
+  position: relative;
+}
+
+.innerCarousel {
+  display: flex;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  cursor: pointer;
+
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+
+  &::-webkit-scrollbar {
+    display: none;
+    width: 0;
+  }
+
+  &::-moz-progress-bar {
+    display: none;
+    width: 0;
+  }
+}
+
+.controls {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .control {
+    height: 100%;
+    z-index: 5;
+
+    .controlBtn {
+      background: transparent;
+      height: 100%;
+      width: 48px;
+      border: none;
+      cursor: pointer;
+      outline: none;
+      color: white;
+    }
+
+    &.left.visible {
+      background: linear-gradient(90deg, rgba(17, 17, 17, 0.5), rgba(17, 17, 17, 0));
+    }
+
+    &.right.visible {
+      background: linear-gradient(270deg, rgba(17, 17, 17, 0.5), rgba(17, 17, 17, 0));
+    }
+  }
+}

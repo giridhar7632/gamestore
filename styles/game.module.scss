@@ -1,0 +1,214 @@
+@use './variables' as *;
+
+.bg {
+  @include full-bg;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &:before {
+    @include gradient-overlay;
+    height: 600px;
+  }
+}
+
+.btn {
+  @include button;
+  margin-right: 10px;
+
+  &.secondary {
+    @include button-secondary;
+  }
+
+  &.primary {
+    @include button-primary;
+  }
+}
+
+.game {
+  z-index: 1;
+  position: relative;
+
+  &Container {
+    display: inline-block;
+    margin: 10%;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    max-width: 1080px;
+
+    @include desktop {
+      padding: 3rem 5rem;
+    }
+
+    .details {
+      display: flex;
+
+      @include mobile {
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .image {
+        width: 300px;
+        height: 168.75px;
+        position: relative;
+
+        img {
+          border-radius: 0.5rem;
+          object-fit: cover;
+          object-position: center;
+        }
+      }
+
+      .text {
+        color: $color-white;
+        margin-left: 2rem;
+
+        .title {
+          font-size: 36px;
+          font-family: 'Ubuntu', sans-serif;
+          color: $color-white;
+          font-weight: bold;
+          width: 100%;
+          line-height: 120%;
+          margin: 0;
+          display: inline-block;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+
+        .extra {
+          font-size: 12px;
+          font-weight: bold;
+
+          * {
+            font-weight: bold;
+          }
+        }
+
+        .btnContainer {
+          margin-top: 20px;
+        }
+      }
+    }
+
+    .genres {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin: 20px auto;
+
+      .genre {
+        font-size: 14px;
+        font-weight: 500;
+        padding: 5px 10px;
+        margin-right: 10px;
+        line-height: 100%;
+        border: 1px solid rgba(245, 245, 245, 0.25);
+        border-radius: 3px;
+        color: $color-white;
+        cursor: pointer;
+        background: rgba(245, 245, 245, 0.25);
+        backdrop-filter: blur(16px);
+      }
+    }
+
+    .section {
+      margin: 2rem auto;
+      padding: 1rem 3rem;
+      background: rgba(17, 17, 17, 0.5);
+      border: 2px solid $color-border;
+      backdrop-filter: blur(16px);
+      border-radius: 1rem;
+
+      h2 {
+        font-size: 18px;
+        font-family: 'Ubuntu', sans-serif;
+        color: $color-white;
+        font-weight: bold;
+        margin: 20px 0;
+        padding-bottom: 10px;
+
+        border-bottom: 2px solid $color-border;
+      }
+
+      p {
+        font-size: 14px;
+        color: $color-gray;
+        font-weight: normal;
+        line-height: 120%;
+      }
+
+      .slider {
+        border-radius: 1rem;
+
+        .sliderItemImage {
+          min-width: 500px;
+          min-height: 281.25px;
+          border-radius: 10px;
+          margin: 0 10px;
+          position: relative;
+
+          img {
+            border-radius: 10px;
+            object-fit: cover;
+            object-position: center;
+          }
+        }
+
+        .sliderItemPlatform {
+          min-width: 150px;
+          height: 100px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin: 0 10px;
+
+          background-position: center;
+          background-size: cover;
+          background-repeat: no-repeat;
+          border-radius: 10px;
+
+          .name {
+            font-size: 16px;
+            font-weight: bold;
+            font-family: 'Ubuntu', sans-serif;
+            line-height: 100%;
+            color: $color-white;
+          }
+        }
+      }
+    }
+  }
+}
+
+.ratingReview {
+  display: flex;
+
+  .rating {
+    margin-right: 2rem;
+
+    @include mobile {
+      margin: 0 auto;
+    }
+
+    .number {
+      font-size: 56px;
+      color: $color-white;
+    }
+
+    .count {
+      text-align: center;
+      color: $color-gray;
+    }
+  }
+
+  .review {
+    color: $color-white;
+    display: flex;
+    align-items: center;
+  }
+}

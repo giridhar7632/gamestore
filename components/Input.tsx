@@ -1,4 +1,4 @@
-import React from 'react'
+import { FC } from 'react'
 import { FieldError, FieldErrorsImpl, Merge, UseFormRegisterReturn } from 'react-hook-form'
 import { Hidden, Visible } from '../utils/icons'
 import classes from '../styles/Form.module.scss'
@@ -14,7 +14,7 @@ type inputProps = {
   [x: string]: any
 }
 
-const Input: React.FC<inputProps> = ({
+const Input: FC<inputProps> = ({
   label,
   type,
   show,

@@ -23,7 +23,8 @@ export default async function handle(req: NextApiRequest, res: NextApiResponse) 
       throw new Error('User already exists! Try logging in.')
     }
 
-    const passwordHash = hash(password, 12)
+    const passwordHash = await hash(password, 12)
+    console.log(password, passwordHash)
     await prisma.user.create({
       data: {
         name,
@@ -38,7 +39,7 @@ export default async function handle(req: NextApiRequest, res: NextApiResponse) 
     })
   } catch (error) {
     res.status(500).json({
-      message: error.message ? error.message : error,
+      message: error?.message || 'Something went wrong! 😅',
       type: 'error',
     })
   }

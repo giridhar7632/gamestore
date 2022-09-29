@@ -1,0 +1,59 @@
+@use './variables' as *;
+
+.textContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: $color-white;
+  margin: 3rem auto;
+}
+
+.bg {
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-image: linear-gradient(to bottom, rgba(17, 17, 17, 0.2), rgba(17, 17, 17, 0.3)),
+    url(/auth.png);
+  background-size: cover;
+  height: 130vh;
+  width: 100vw;
+  z-index: -1;
+}
+
+.text {
+  font-style: normal;
+  font-weight: 900;
+  font-size: 220px;
+  line-height: 200px;
+  margin: 10px auto;
+
+  text-shadow: 0px 22px 52px rgba(245, 245, 245, 0.3);
+}
+
+.desc {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  margin: 0 auto;
+}
+
+.small_text {
+  font-style: normal;
+  font-weight: 400;
+  margin: 5px auto;
+}
+
+.btn {
+  @include button;
+  @include button-secondary;
+  width: max-content;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 1rem auto;
+}
