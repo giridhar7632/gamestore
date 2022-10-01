@@ -13,6 +13,6 @@ export const useGetGameScreenshots = (id: string) =>
 
 export const useGetGames = ({ page, keyword, genre }: getGamesArgs) => {
   return useQuery<gamesData, Error>(['games', page, keyword, genre], () =>
-    getAllGames({ page, keyword, genre }),
+    getAllGames({ page, keyword, genres: genre }),
   )
 }

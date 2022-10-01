@@ -1,27 +1,27 @@
 import { useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
-import Game from '../components/Cards/Game'
-import Section from '../components/MainPage/Section'
-import genres from '../utils/genres.json'
-import Layout from '../layout/Layout'
-import { ExploreGenres } from '../components/Genres'
-import useWindowSize from '../lib/hooks/useWindowSize'
-import { useGetGames } from '../lib/hooks/useGetGames'
-import Loader from '../components/Loader'
-import classes from '../styles/explore.module.scss'
-import { ChevronLeft, ChevronRight } from '../utils/icons'
-import { removeUndefined } from '../utils/removeUndefined'
+import Game from '../../components/Cards/Game'
+import Section from '../../components/MainPage/Section'
+import Layout from '../../layout/Layout'
+import useWindowSize from '../../lib/hooks/useWindowSize'
+import { useGetGames } from '../../lib/hooks/useGetGames'
+import Loader from '../../components/Loader'
+import classes from '../../styles/genre.module.scss'
+import { ChevronLeft, ChevronRight } from '../../utils/icons'
+import { removeUndefined } from '../../utils/removeUndefined'
+import genres from '../../utils/genres.json'
 
-const Explore = () => {
+const Explore = ({ genre }) => {
   const router = useRouter()
   const { pathname, query } = router
   const [page, setPage] = useState<number>(parseInt(`${query?.page}`) || 1)
-  const { isLoading, isError, data, error } = useGetGames({ page })
+  const { isLoading, isError, data, error } = useGetGames({ page, genre: genre.slug })
   const { width } = useWindowSize()
   const changeQuery = (page) =>
     router.push({
       pathname,
       query: removeUndefined({
+        ...query,
         page,
       }),
     })
@@ -32,11 +32,18 @@ const Explore = () => {
   }, [page])
 
   return (
-    <Layout meta={{ name: 'Explore' }}>
-      <div className={classes.explore}>
-        <Section title={'Genres'} style={{ marginTop: 30 }}>
-          <ExploreGenres genres={genres?.results} />
-        </Section>
+    <Layout meta={{ name: genre.name }}>
+      <div
+        className={classes.bg}
+        style={{
+          backgroundImage: `linear-gradient(to bottom, rgba(17, 17, 17, 0.35), rgba(17, 17, 17, 0.4)), url(${genre.image_background})`,
+        }}
+      />
+      <div className={classes.title}>
+        <div className={classes.background}>{genre.name}</div>
+        <div className={classes.text}>{genre.name}</div>
+      </div>
+      <div className={classes.genre}>
         <Section title={'Games'}>
           <div className={classes.container}>
             {isLoading ? (
@@ -86,3 +93,25 @@ const Explore = () => {
 }
 
 export default Explore
+
+export async function getStaticProps({ params }) {
+  const genre = genres.results?.find((i) => i.slug === params.slug)
+  return {
+    props: {
+      genre,
+    },
+  }
+}
+
+export async function getStaticPaths() {
+  return {
+    paths: genres.results.map((game) => {
+      return {
+        params: {
+          slug: game.slug,
+        },
+      }
+    }),
+    fallback: false,
+  }
+}

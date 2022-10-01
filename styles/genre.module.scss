@@ -1,0 +1,79 @@
+@use './variables' as *;
+@use './explore.module.scss' as explore;
+
+.bg {
+  @include full-bg;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+
+  &:before {
+    @include gradient-overlay;
+    height: 600px;
+  }
+}
+
+.title {
+  width: max-content;
+  position: relative;
+  margin: 1rem auto;
+  margin-top: 10%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  font-family: 'Ubuntu', sans-serif;
+
+  .background {
+    position: absolute;
+    font-size: 56px;
+    font-weight: bolder;
+    text-transform: uppercase;
+    -webkit-text-fill-color: transparent;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke: 1px;
+    z-index: 1;
+    opacity: 0.5;
+    line-height: 100%;
+
+    @include desktop {
+      font-size: 120px;
+    }
+  }
+
+  .text {
+    font-weight: 700;
+    font-size: 48px;
+    color: $color-white;
+    z-index: 3;
+
+    @include desktop {
+      font-size: 72px;
+    }
+  }
+}
+
+.genre {
+  z-index: 1;
+  @include explore.container;
+}
+
+.pagination {
+  width: 80%;
+  max-width: 1080px;
+  margin: 10px auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @include mobile {
+    width: 95%;
+  }
+
+  &Btn {
+    @include button;
+    @include button-secondary;
+    display: flex;
+    align-items: center;
+  }
+}
