@@ -6,7 +6,7 @@ import GamesSlider from '../components/MainPage/GamesSlider'
 import Header from '../components/MainPage/Header'
 import Section from '../components/MainPage/Section'
 import TrendingSection from '../components/MainPage/Trending'
-import { getAllGames, getLatest, getTrending } from '../lib/requests'
+import { getAllGames } from '../lib/requests'
 import { Games } from '../utils/types'
 import genres from '../utils/genres.json'
 import Loader from '../components/Loader'
@@ -17,17 +17,17 @@ type homeProps = {
   trending: Games[]
 }
 
-const Home: NextPage = ({ games, latest, trending }: homeProps) => {
+const Home: NextPage = ({ games }: homeProps) => {
   const { data: session, status } = useSession()
-  if (status === 'loading') return <Loader size={10} />
+  if (status === 'loading') return <Loader size={5} containerStyles={{ height: '100vh' }} />
 
   console.log('session', session)
 
   return (
     <Layout session={session} meta={{ name: 'Discover' }}>
       <Header games={games?.slice(0, 10)} />
-      <TrendingSection title={'Trending'} games={trending} />
-      <GamesSlider title={'Latest Releases'} games={latest} />
+      <TrendingSection title={'Trending'} />
+      <GamesSlider title={'Latest Releases'} />
       <Section title={'Genres'}>
         <DiscoverGenres genres={genres?.results} />
       </Section>
@@ -39,9 +39,7 @@ export default Home
 
 export async function getStaticProps() {
   const { games } = await getAllGames()
-  const { games: trending } = await getTrending()
-  const { games: latest } = await getLatest()
   return {
-    props: { games, trending, latest },
+    props: { games },
   }
 }

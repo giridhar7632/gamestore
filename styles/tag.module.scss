@@ -1,0 +1,134 @@
+$font-size-s: 18px;
+$font-size-x: 14px;
+$border-size: 1px;
+$with-radius: true;
+$parent-background: #1f1f1f;
+
+.theme {
+  font-family: 'Ubuntu', sans-serif;
+  border-color: #777;
+  border-style: solid;
+  background-color: #f5f5f5;
+  color: #1f1f1f;
+  font-weight: 500;
+}
+
+.bigTag {
+  @extend .theme;
+  display: block;
+  float: left;
+  text-decoration: none;
+  font-size: $font-size-s;
+  padding: ($font-size-s / 2) ($font-size-s / 1.5);
+  line-height: 1;
+  position: relative;
+  margin-left: $font-size-s * 0.75;
+  border-width: $border-size $border-size $border-size 0;
+
+  @if ($with-radius) {
+    border-radius: 0 $font-size-s / 4 $font-size-s / 4 0;
+  }
+
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    display: block;
+    border-width: $border-size;
+  }
+
+  &:before {
+    @extend .theme;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    width: $font-size-s * 2;
+    height: $font-size-s * 2;
+    border-radius: 0px;
+    transform: translate(-$font-size-s - $border-size, -$border-size) scale(0.70711, 0.70711)
+      rotateZ(-45deg);
+
+    @if ($with-radius) {
+      border-radius: $font-size-s / 3 0 0 0;
+    }
+  }
+
+  &:after {
+    @extend .theme;
+    top: -$border-size + $font-size-s / 2 + $font-size-s / 4;
+    left: -$font-size-s / 3;
+    width: $font-size-s / 2;
+    height: $font-size-s / 2;
+    border-radius: 50%;
+    background: $parent-background;
+  }
+}
+
+.bigTag,
+.bigTag:before {
+  box-shadow: 2px 3px 3px rgba(255, 255, 255, 0.15);
+}
+
+.bigTag:after {
+  box-shadow: inset 2px 3px 3px rgba(255, 255, 255, 0.15);
+}
+
+.smallTag {
+  @extend .theme;
+  display: block;
+  float: left;
+  text-decoration: none;
+  font-size: $font-size-x;
+  padding: ($font-size-x / 2) ($font-size-x / 1.5);
+  line-height: 1;
+  position: relative;
+  margin-left: $font-size-x * 0.75;
+  border-width: $border-size $border-size $border-size 0;
+
+  @if ($with-radius) {
+    border-radius: 0 $font-size-x / 4 $font-size-x / 4 0;
+  }
+
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    display: block;
+    border-width: $border-size;
+  }
+
+  &:before {
+    @extend .theme;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    width: $font-size-x * 2;
+    height: $font-size-x * 2;
+    border-radius: 0px;
+    transform: translate(-$font-size-x - $border-size, -$border-size) scale(0.70711, 0.70711)
+      rotateZ(-45deg);
+
+    @if ($with-radius) {
+      border-radius: $font-size-x / 3 0 0 0;
+    }
+  }
+
+  &:after {
+    @extend .theme;
+    top: -$border-size + $font-size-x / 2 + $font-size-x / 4;
+    left: -$font-size-x / 3;
+    width: $font-size-x / 2;
+    height: $font-size-x / 2;
+    border-radius: 50%;
+    background: $parent-background;
+  }
+}
+
+.smallTag,
+.smallTag:before {
+  box-shadow: 2px 3px 3px rgba(255, 255, 255, 0.15);
+}
+
+.smallTag:after {
+  box-shadow: inset 2px 3px 3px rgba(255, 255, 255, 0.15);
+}

@@ -5,6 +5,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin: 0 auto;
 
   &:before {
     @include gradient-overlay;
@@ -12,9 +13,31 @@
   }
 }
 
+.price {
+  display: flex;
+  align-items: center;
+
+  .cost {
+    font-size: 32px;
+    font-weight: 700;
+    margin-right: 15px;
+  }
+}
+
+.btnContainer {
+  margin-top: 20px;
+  width: 100%;
+}
+
 .btn {
   @include button;
   margin-right: 10px;
+  width: 45%;
+
+  @include mobile {
+    margin: 5px 0;
+    width: 100%;
+  }
 
   &.secondary {
     @include button-secondary;
@@ -28,16 +51,29 @@
 .game {
   z-index: 1;
   position: relative;
+  margin: 0 auto;
+  max-width: 1440px;
 
   &Container {
     display: inline-block;
-    margin: 10%;
     padding: 1rem 2rem;
     border-radius: 1rem;
+    width: 100%;
     max-width: 1080px;
+    margin: auto;
+    margin-top: 50%;
+
+    @include mobile {
+      padding: 1rem 10px;
+    }
 
     @include desktop {
+      margin: 10%;
       padding: 3rem 5rem;
+    }
+
+    @include big-screen {
+      max-width: 1280px;
     }
 
     .details {
@@ -57,6 +93,11 @@
           border-radius: 0.5rem;
           object-fit: cover;
           object-position: center;
+        }
+
+        @include tablet {
+          width: 300px;
+          height: 168.75px;
         }
       }
 
@@ -86,10 +127,6 @@
             font-weight: bold;
           }
         }
-
-        .btnContainer {
-          margin-top: 20px;
-        }
       }
     }
 
@@ -117,12 +154,19 @@
     }
 
     .section {
+      width: 100%;
       margin: 2rem auto;
-      padding: 1rem 3rem;
+      padding: 10px;
       background: rgba(17, 17, 17, 0.5);
-      border: 2px solid $color-border;
       backdrop-filter: blur(16px);
-      border-radius: 1rem;
+      border-radius: 5px;
+
+      @include desktop {
+        padding: 1rem;
+        border: 2px solid $color-border;
+        border-radius: 1rem;
+        padding: 1rem 3rem;
+      }
 
       h2 {
         font-size: 18px;
@@ -146,14 +190,19 @@
         border-radius: 1rem;
 
         .sliderItemImage {
-          min-width: 500px;
-          min-height: 281.25px;
+          min-width: 300px;
+          min-height: 168.75px;
           border-radius: 10px;
           margin: 0 10px;
           position: relative;
 
+          @include desktop {
+            min-width: 500px;
+            min-height: 281.25px;
+          }
+
           img {
-            border-radius: 10px;
+            border-radius: 5px;
             object-fit: cover;
             object-position: center;
           }
@@ -188,6 +237,10 @@
 .ratingReview {
   display: flex;
 
+  @include mobile {
+    flex-direction: column;
+  }
+
   .rating {
     margin-right: 2rem;
 
@@ -210,5 +263,14 @@
     color: $color-white;
     display: flex;
     align-items: center;
+  }
+}
+
+.ratingItem {
+  margin-left: 10px;
+  font-size: 14px;
+
+  @include mobile {
+    display: none;
   }
 }

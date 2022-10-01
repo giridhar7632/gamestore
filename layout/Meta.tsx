@@ -15,7 +15,7 @@ export type MetaProps = {
 }
 
 const Meta: FC<MetaProps> = ({
-  title = 'Game store',
+  title = 'Game Store',
   name = '',
   description = 'A place to buy amazing games for different platforms at best prices in the world.',
   image = `/og-image`,

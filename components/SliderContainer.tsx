@@ -67,9 +67,6 @@ const SliderContainer: FC<PropsWithChildren> = ({ children }) => {
   return (
     <div>
       <motion.div className={classes.carousel}>
-        <motion.div className={classes.innerCarousel} ref={scrollRef} onScroll={scrollCheck}>
-          {children}
-        </motion.div>
         <motion.div className={classes.controls}>
           <Control
             isVisible={scrollX !== 0}
@@ -95,6 +92,9 @@ const SliderContainer: FC<PropsWithChildren> = ({ children }) => {
           >
             <ChevronRight />
           </Control>
+        </motion.div>
+        <motion.div className={classes.innerCarousel} ref={scrollRef} onScroll={scrollCheck}>
+          {children}
         </motion.div>
       </motion.div>
     </div>

@@ -18,6 +18,7 @@
 
 # development
 .idea
+.eslintcache
 
 # misc
 .DS_Store

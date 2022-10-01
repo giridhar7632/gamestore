@@ -1,0 +1,40 @@
+@use './variables' as *;
+
+.explore {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1280px;
+}
+
+.error {
+  height: 100%;
+  @include errorStyle;
+}
+
+.pagination {
+  width: 80%;
+  max-width: 1080px;
+  margin: 10px auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @include mobile {
+    width: 95%;
+  }
+
+  &Btn {
+    @include button;
+    @include button-secondary;
+    display: flex;
+    align-items: center;
+  }
+}

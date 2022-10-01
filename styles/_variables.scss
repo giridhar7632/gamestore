@@ -49,6 +49,17 @@ $color-bg: #1f1f1f;
   }
 }
 
+@mixin errorStyle {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24;
+  font-weight: bold;
+  opacity: 0.3;
+  color: #f5f5f5;
+}
+
 @mixin full-bg {
   position: absolute;
   top: 0;
@@ -57,9 +68,9 @@ $color-bg: #1f1f1f;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 100vh;
   max-width: 1920px;
   max-height: 1080px;
+  height: 100vh;
   width: 100vw;
   overflow: hidden;
 }
@@ -88,6 +99,12 @@ $color-bg: #1f1f1f;
 
 @mixin desktop {
   @media screen and (min-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin big-screen {
+  @media screen and (min-width: 1300px) {
     @content;
   }
 }

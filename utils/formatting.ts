@@ -19,9 +19,9 @@ export function formatGamesData(data): gamesData {
             games_count,
             image_background,
           })),
-        price: game.id < 100 ? game.id : parseInt(`${game.id}`.slice(0, 4)) / 100,
         rating: game.rating,
         ratings_count: game.ratings_count,
+        ...getPrice(game.id),
       })) || [],
   }
 }
@@ -47,5 +47,14 @@ export function formatSingleGame(game): Game {
     ratings_count: game.ratings_count,
     officialSite: game.website,
     extraImg: game.background_image_additional,
+    ...getPrice(game.id),
+  }
+}
+
+const getPrice = (id: number): { price: number; off: boolean | number } => {
+  const less = parseInt(`${id}`.slice(0, 4))
+  return {
+    price: id < 100 ? id : less / 100,
+    off: id > 80 ? parseInt(`${less / 100 - less / 1000}`) : false,
   }
 }

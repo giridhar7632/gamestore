@@ -36,10 +36,12 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  z-index: 5;
+  pointer-events: none;
 
   .control {
     height: 100%;
-    z-index: 5;
+    pointer-events: all;
 
     .controlBtn {
       background: transparent;

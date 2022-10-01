@@ -53,7 +53,7 @@ export type Game = {
   genres?: Genres[]
   platforms?: any
   price?: number
-  off?: number
+  off?: number | boolean
   released: Date
   rating: number | string
   ratings: Ratings[]

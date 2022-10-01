@@ -9,9 +9,6 @@ import prisma from '../../../lib/prisma'
 const authHandler: NextApiHandler = (req, res) => NextAuth(req, res, options)
 export default authHandler
 
-console.log('GOOGLE_ID: ', process.env.GOOGLE_ID)
-console.log('GOOGLE_SECRET: ', process.env.GOOGLE_SECRET)
-
 const options: NextAuthOptions = {
   session: {
     strategy: 'jwt',

@@ -4,15 +4,16 @@ import Rating from '../../components/Rating'
 import Image from '../../components/CustomImage'
 import Link from '../../components/CustomLink'
 import Layout from '../../layout/Layout'
-import { getAllGames, getSingleGame, getSingleGameScreenshots } from '../../lib/requests'
+import { getAllGames, getLatest, getSingleGame, getTrending } from '../../lib/requests'
 import SliderContainer from '../../components/SliderContainer'
 import { Star } from '../../utils/icons'
 import { Progress } from '../../components/Progress'
-import classes from '../../styles/game.module.scss'
 import { NextPage } from 'next'
 import { Game } from '../../utils/types'
-import { fetcher } from '../../utils/fetcher'
 import Loader from '../../components/Loader'
+import { useGetGameScreenshots } from '../../lib/hooks/useGetGames'
+import classes from '../../styles/game.module.scss'
+import tags from '../../styles/tag.module.scss'
 
 type singleGame = {
   game: Game
@@ -34,20 +35,7 @@ export const Section: FC<PropsWithChildren<{ [x: string]: any }>> = ({ children,
 )
 
 const SingleGame: NextPage = ({ game }: singleGame) => {
-  const [screenshots, setScreenshots] = useState([])
-  useEffect(() => {
-    ;(async () => {
-      const { data: ss }: { data: string[] } = await fetcher('/api/games/screenshots', {
-        method: 'POST',
-        body: {
-          id: game.slug,
-        },
-      })
-      setScreenshots(ss)
-    })()
-  }, [])
-
-  console.log(screenshots)
+  const { isLoading, isError, data: screenshots, error } = useGetGameScreenshots(game.slug)
 
   return (
     <Layout meta={{ name: game.title, description: game.description_raw }}>
@@ -73,16 +61,20 @@ const SingleGame: NextPage = ({ game }: singleGame) => {
                 </Link>
               </div>
               <Rating value={parseInt(`${game.rating}`)} count={game.ratings_count} />
-              <div className={classes.btnContainer}>
-                <button type="button" className={`${classes.secondary} ${classes.btn}`}>
-                  Add To Cart
-                </button>
-                <button type="button" className={`${classes.primary} ${classes.btn}`}>
-                  Add To Cart
-                </button>
+              <div className={classes.price}>
+                <div className={classes.cost}>$ {game.price} </div>
+                {game.off ? <div className={tags.bigTag}>{`-${game.off}%`}</div> : null}
               </div>
             </div>
           </Section>
+          <div className={classes.btnContainer}>
+            <button type="button" className={`${classes.secondary} ${classes.btn}`}>
+              Add To Cart
+            </button>
+            <button type="button" className={`${classes.primary} ${classes.btn}`}>
+              Buy Now
+            </button>
+          </div>
           <div className={classes.genres}>
             {game?.genres?.map((i) => (
               <span className={classes.genre} key={i.id}>
@@ -104,7 +96,25 @@ const SingleGame: NextPage = ({ game }: singleGame) => {
           <Section className={classes.section}>
             <h2>ScreenShots</h2>
             <div className={classes.slider}>
-              {screenshots.length ? (
+              {isLoading ? (
+                <Loader size={5} containerStyles={{ height: 281.25 }} />
+              ) : isError ? (
+                <div
+                  style={{
+                    height: 100,
+                    width: '100%',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    fontSize: 24,
+                    fontWeight: 'bold',
+                    opacity: 0.3,
+                    color: '#f5f5f5',
+                  }}
+                >
+                  {error ? error.message : 'Something went wrong! 😕'}
+                </div>
+              ) : (
                 <SliderContainer>
                   {screenshots?.map((i, idx) => (
                     <div key={idx} className={classes.sliderItemImage}>
@@ -112,18 +122,6 @@ const SingleGame: NextPage = ({ game }: singleGame) => {
                     </div>
                   ))}
                 </SliderContainer>
-              ) : (
-                <div
-                  style={{
-                    height: 281.25,
-                    width: '100%',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                  }}
-                >
-                  <Loader size={10} />
-                </div>
               )}
             </div>
           </Section>
@@ -154,9 +152,7 @@ const SingleGame: NextPage = ({ game }: singleGame) => {
                       />{' '}
                     </span>
                     <Progress value={item.percent} />
-                    <span style={{ marginLeft: 10, fontSize: 14 }}>
-                      {item.count + ' · ' + item.title}
-                    </span>
+                    <span className={classes.ratingItem}>{item.count + ' · ' + item.title}</span>
                   </div>
                 ))}
               </div>
@@ -202,14 +198,16 @@ export async function getStaticProps({ params }) {
 
 export async function getStaticPaths() {
   const { games } = await getAllGames()
+  const { games: trending } = await getTrending()
+  const { games: latest } = await getLatest()
   return {
-    paths: games.map((game) => {
+    paths: [...games, ...trending, ...latest].map((game) => {
       return {
         params: {
           slug: game.slug,
         },
       }
     }),
-    fallback: false,
+    fallback: true,
   }
 }

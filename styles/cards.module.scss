@@ -82,6 +82,14 @@
     border-radius: 0.5rem;
   }
 
+  .gameDiscount {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    display: block;
+    z-index: 4;
+  }
+
   &Image {
     min-width: 300px;
     height: 168.75px;

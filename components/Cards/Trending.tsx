@@ -2,6 +2,7 @@ import { FC } from 'react'
 import classes from '../../styles/cards.module.scss'
 import { Star } from '../../utils/icons'
 import { Games } from '../../utils/types'
+import Link from '../CustomLink'
 
 type trendingCardProps = {
   game: Games
@@ -19,7 +20,9 @@ const TrendingCard: FC<trendingCardProps> = ({ game, ...props }) => {
       {game?.price ? (
         <div className={classes.controls}>
           <div className={classes.price}>${game?.price}</div>
-          <button className={classes.cart}>Buy Now</button>
+          <Link href={`/game/${game.slug}`}>
+            <button className={classes.cart}>Buy Now</button>
+          </Link>
         </div>
       ) : null}
     </div>

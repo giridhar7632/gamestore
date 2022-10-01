@@ -18,7 +18,7 @@ export default async function getSceenshots(
   const { id } = req.body
   try {
     const fetched: any = await fetcher(
-      `${process.env.GAMES_API_URL}/games/${id}/screenshots?key=${process.env.GAMES_API_KEY}`,
+      `${process.env.NEXT_PUBLIC_GAMES_API_URL}/games/${id}/screenshots?key=${process.env.NEXT_PUBLIC_GAMES_API_KEY}`,
       { method: 'GET' },
     )
     console.log(id, fetched)
