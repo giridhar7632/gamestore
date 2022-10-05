@@ -4,16 +4,26 @@ import Image from '../components/CustomImage'
 import Link from '../components/CustomLink'
 import { useEffect, useState } from 'react'
 import classes from '../styles/Navbar.module.scss'
-import { Cart, Heart, Logo, Search } from '../utils/icons'
+import { Cart as CartIcon, Heart, Logo, Search } from '../utils/icons'
 import { getTime } from '../lib/requests'
 import useWindowSize from '../lib/hooks/useWindowSize'
+import { useAuth } from '../lib/hooks/useAuth'
+import { useCart } from '../components/cart/hooks/useCart'
 
 const Navbar = () => {
+  const { session, signOut } = useAuth()
   const [time, setTime] = useState(getTime())
   const [active, setActive] = useState(false)
   const { width } = useWindowSize()
   const { pathname } = useRouter()
-  const cartItems = 0
+  const {
+    state: { cart },
+    dispatch,
+  } = useCart()
+  const handleOpenMenu = () => {
+    console.log('open')
+    dispatch({ type: 'openMenu' })
+  }
   useEffect(() => {
     const interval = setInterval(() => {
       setTime(getTime())
@@ -50,7 +60,7 @@ const Navbar = () => {
               Deals
             </Link>
           )}
-          <Link
+          {/* <Link
             className={clsx(
               classes.navItem,
               classes.navLink,
@@ -59,30 +69,48 @@ const Navbar = () => {
             href={'/browse'}
           >
             Browse
-          </Link>
+          </Link> */}
         </div>
         <div className={classes.right}>
-          <div className={classes.navList}>
-            <span className={clsx(classes.navItem, classes.icon)}>
-              <Search size={30} />
-            </span>
-            <span className={clsx(classes.navItem, classes.icon)}>
-              <Heart size={30} />
-            </span>
-            <span className={clsx(classes.navItem, classes.icon, classes.badgeContainer)}>
-              <Cart size={30} />
-              {cartItems ? <div className={classes.badge}>{cartItems}</div> : null}
-            </span>
-            <span className={clsx(classes.navItem, classes.profile)}>
-              <Image
-                src="https://api.multiavatar.com/thv.svg"
-                alt="giridhar"
-                width={40}
-                height={40}
-                style={{ display: 'inline-flex', alignSelf: 'center' }}
-              />
-            </span>
-          </div>
+          {session ? (
+            <div className={classes.navList}>
+              {/* <span className={clsx(classes.navItem, classes.icon)}>
+                <Search size={30} />
+              </span> */}
+              {/* <span className={clsx(classes.navItem, classes.icon)}>
+                <Heart size={30} />
+              </span> */}
+              <span
+                className={clsx(classes.navItem, classes.icon, classes.badgeContainer)}
+                onClickCapture={handleOpenMenu}
+              >
+                <CartIcon size={30} />
+                {cart ? <div className={classes.badge}>{cart}</div> : null}
+              </span>
+              <span className={clsx(classes.navItem, classes.profile)}>
+                <Image
+                  src={session.user.image}
+                  alt={session.user.name}
+                  width={40}
+                  height={40}
+                  style={{ display: 'inline-flex', alignSelf: 'center' }}
+                />
+              </span>
+              <button
+                className={clsx(classes.navItem, classes.btn, classes.btnSecondary)}
+                type={'button'}
+                onClick={() => signOut()}
+              >
+                Log out
+              </button>
+            </div>
+          ) : (
+            <Link href="/auth/login">
+              <button className={clsx(classes.btn, classes.btnPrimary)} type={'button'}>
+                Log in
+              </button>
+            </Link>
+          )}
           <div>
             <p>{time}</p>
           </div>
@@ -97,8 +125,8 @@ const Navbar = () => {
       </Link>
       <div style={{ display: 'flex', alignItems: 'center' }}>
         <div className={classes.icons}>
-          <Heart className={classes.navItem} size={30} />
-          <Cart className={classes.navItem} size={30} />
+          {/* <Heart className={classes.navItem} size={30} /> */}
+          <CartIcon className={classes.navItem} size={30} onClick={handleOpenMenu} />
           <Image
             className={classes.navItem}
             src="https://api.multiavatar.com/giridhar.svg"
@@ -130,9 +158,9 @@ const Navbar = () => {
                 Deals
               </Link>
             ) : null}
-            <Link className={classes.mobileNavItem} href="/browse">
+            {/* <Link className={classes.mobileNavItem} href="/browse">
               Search
-            </Link>
+            </Link> */}
           </nav>
         </div>
       </div>

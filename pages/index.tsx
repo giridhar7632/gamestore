@@ -10,6 +10,7 @@ import { getAllGames } from '../lib/requests'
 import { Games } from '../utils/types'
 import genres from '../utils/genres.json'
 import Loader from '../components/Loader'
+// import Cart from '../components/cart/Cart'
 
 type homeProps = {
   games: Games[]
@@ -33,6 +34,7 @@ const Home: NextPage = ({ games }: homeProps) => {
       </Section>
     </Layout>
   )
+  // return <Cart />
 }
 
 export default Home

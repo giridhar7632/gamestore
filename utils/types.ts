@@ -32,6 +32,15 @@ export type Ratings = {
   percent?: number
 }
 
+export type Product = {
+  id: string
+  backgroundImage?: string
+  title: string
+  slug: string
+  price: number
+  quantity: number
+}
+
 export type Games = {
   id: string
   backgroundImage?: string

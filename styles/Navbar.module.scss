@@ -15,6 +15,19 @@
   margin: 0 auto;
 }
 
+.btn {
+  @include button;
+
+  &Primary {
+    margin: 0 20px;
+    @include button-primary;
+  }
+
+  &Secondary {
+    @include button-secondary;
+  }
+}
+
 .logo {
   display: flex;
   align-items: center;
@@ -81,6 +94,7 @@
     align-items: center;
     justify-content: center;
     border-radius: 999px;
+    overflow: hidden;
   }
 
   &.active {

@@ -55,22 +55,7 @@ const options: NextAuthOptions = {
       },
     }),
   ],
-  callbacks: {
-    async jwt({ token, user }) {
-      if (user) {
-        token.name = user?.name
-      }
-      return token
-    },
-    async session({ session, token }) {
-      session.user = {
-        name: token?.name,
-      }
-      return session
-    },
-  },
   pages: {
-    signIn: '/auth/signin',
-    error: '/auth/signin',
+    signIn: '/auth/login',
   },
 }

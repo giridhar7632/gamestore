@@ -14,6 +14,8 @@ import Loader from '../../components/Loader'
 import { useGetGameScreenshots } from '../../lib/hooks/useGetGames'
 import classes from '../../styles/game.module.scss'
 import tags from '../../styles/tag.module.scss'
+import NotFound from '../../components/NotFound'
+import { useCart } from '../../components/cart/hooks/useCart'
 
 type singleGame = {
   game: Game
@@ -35,40 +37,55 @@ export const Section: FC<PropsWithChildren<{ [x: string]: any }>> = ({ children,
 )
 
 const SingleGame: NextPage = ({ game }: singleGame) => {
-  const { isLoading, isError, data: screenshots, error } = useGetGameScreenshots(game.slug)
+  const { isLoading, isError, data: screenshots, error } = useGetGameScreenshots(game?.slug)
+  const { dispatch } = useCart()
+  const { slug, backgroundImage, title, price, ...item } = game
+  const addToCart = () => {
+    dispatch({
+      type: 'addProduct',
+      payload: { id: slug, slug, backgroundImage, title, price, quantity: 1 },
+    })
+    dispatch({ type: 'openMenu' })
+  }
+
+  if (!game) return <NotFound />
 
   return (
-    <Layout meta={{ name: game.title, description: game.description_raw }}>
+    <Layout meta={{ name: title, description: item.description_raw }}>
       <div
         className={classes.bg}
         style={{
-          backgroundImage: `linear-gradient(to bottom, rgba(17, 17, 17, 0.35), rgba(17, 17, 17, 0.4)), url(${game.extraImg})`,
+          backgroundImage: `linear-gradient(to bottom, rgba(17, 17, 17, 0.35), rgba(17, 17, 17, 0.4)), url(${item.extraImg})`,
         }}
       />
       <main className={classes.game}>
         <div className={classes.gameContainer}>
           <Section className={classes.details}>
             <div className={classes.image}>
-              <Image src={game.backgroundImage} alt={''} layout="fill" />
+              <Image src={backgroundImage} alt={''} layout="fill" />
             </div>
             <div className={classes.text}>
-              <h1 className={classes.title}>{game.title}</h1>
+              <h1 className={classes.title}>{title}</h1>
               <div className={classes.extra}>
-                <span>{new Date(game.released).getFullYear()}</span>
+                <span>{new Date(item.released).getFullYear()}</span>
                 {' · '}
-                <Link href={game.officialSite} external>
+                <Link href={item.officialSite} external>
                   Official Website
                 </Link>
               </div>
-              <Rating value={parseInt(`${game.rating}`)} count={game.ratings_count} />
+              <Rating value={parseInt(`${item.rating}`)} count={item.ratings_count} />
               <div className={classes.price}>
-                <div className={classes.cost}>$ {game.price} </div>
-                {game.off ? <div className={tags.bigTag}>{`-${game.off}%`}</div> : null}
+                <div className={classes.cost}>$ {price} </div>
+                {item.off ? <div className={tags.bigTag}>{`-${item.off}%`}</div> : null}
               </div>
             </div>
           </Section>
           <div className={classes.btnContainer}>
-            <button type="button" className={`${classes.secondary} ${classes.btn}`}>
+            <button
+              type="button"
+              onClick={addToCart}
+              className={`${classes.secondary} ${classes.btn}`}
+            >
               Add To Cart
             </button>
             <button type="button" className={`${classes.primary} ${classes.btn}`}>
@@ -128,14 +145,14 @@ const SingleGame: NextPage = ({ game }: singleGame) => {
 
           <Section className={classes.section}>
             <h2>Description</h2>
-            <div dangerouslySetInnerHTML={{ __html: game.description }}></div>
+            <div dangerouslySetInnerHTML={{ __html: item.description }}></div>
           </Section>
           <Section className={classes.section}>
             <h2>Ratings & Reviews</h2>
             <div className={classes.ratingReview}>
               <div className={classes.rating}>
-                <div className={classes.number}>{game.rating}</div>
-                <p className={classes.count}>{game.ratings_count + ' '} Ratings</p>
+                <div className={classes.number}>{item.rating}</div>
+                <p className={classes.count}>{item.ratings_count + ' '} Ratings</p>
               </div>
               <div className={classes.reviews}>
                 {game?.ratings?.map((item) => (
@@ -164,7 +181,7 @@ const SingleGame: NextPage = ({ game }: singleGame) => {
               <h2>Platforms</h2>
               <div className={classes.slider}>
                 <SliderContainer>
-                  {game.platforms?.map((i, idx) => (
+                  {item.platforms?.map((i, idx) => (
                     <div
                       key={idx}
                       className={classes.sliderItemPlatform}
@@ -188,11 +205,19 @@ const SingleGame: NextPage = ({ game }: singleGame) => {
 export default SingleGame
 
 export async function getStaticProps({ params }) {
-  const game = await getSingleGame(params.slug)
-  return {
-    props: {
-      game,
-    },
+  try {
+    const game = await getSingleGame(params.slug)
+    return {
+      props: {
+        game,
+      },
+    }
+  } catch (error) {
+    return {
+      props: {
+        game: undefined,
+      },
+    }
   }
 }
 

@@ -1,6 +1,6 @@
 @use './variables' as *;
 
-.genreItem {
+.content {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -9,9 +9,15 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  border-radius: 10px;
   color: $color-white;
-  border: 2px solid $color-border;
+  transition: all 0.3s;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+
+  &:hover {
+    transform: scale(1.05);
+  }
 
   .name {
     font-size: 16px;
@@ -34,7 +40,11 @@
   .genreItem {
     min-width: 200px;
     height: 100px;
-    margin: 0 10px;
+    margin: 0 5px;
+    overflow: hidden;
+    position: relative;
+    border: 2px solid $color-border;
+    border-radius: 10px;
   }
 }
 
@@ -43,20 +53,30 @@
   display: flex;
   // align-items: center;
   align-items: stretch;
-  justify-content: space-between;
+  justify-content: stretch;
   flex-wrap: wrap;
   margin: 0 auto;
+  gap: 5px;
 
   @include mobile {
     justify-content: stretch;
   }
 
   .genreItem {
-    height: 100px;
-    margin: 5px;
-    padding: 5px 10px;
     border: none;
-    // width: auto;
     flex: 1;
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px;
+    min-width: 150px;
+    min-height: 100px;
+
+    @include desktop {
+      min-width: 220px;
+    }
+
+    .content {
+      padding: 5px 30px;
+    }
   }
 }

@@ -228,6 +228,59 @@ export function Facebook(props: any) {
   )
 }
 
+export function Trash(props: any) {
+  return GenerateIcon(
+    {
+      tag: 'svg',
+      attr: {
+        className: 'trash',
+        viewBox: '0 0 24 24',
+        width: props.size || '24',
+        height: props.size || '24',
+        fill: 'none',
+        stroke: 'currentColor',
+        strokeWidth: '2',
+        strokeLinecap: 'round',
+        strokeLinejoin: 'round',
+      },
+      child: [
+        { tag: 'path', attr: { fill: 'none', d: 'M0 0h24v24H0z', stroke: 'none' } },
+        { tag: 'line', attr: { x1: '4', y1: '7', x2: '20', y2: '7' } },
+        { tag: 'line', attr: { x1: '10', y1: '11', x2: '10', y2: '17' } },
+        { tag: 'line', attr: { x1: '14', y1: '11', x2: '14', y2: '17' } },
+        { tag: 'path', attr: { d: 'M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12' } },
+        { tag: 'path', attr: { d: 'M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3' } },
+      ],
+    },
+    props,
+  )
+}
+
+export function Bag(props: any) {
+  return GenerateIcon(
+    {
+      tag: 'svg',
+      attr: {
+        viewBox: '0 0 24 24',
+        fill: 'none',
+      },
+      child: [
+        {
+          tag: 'path',
+          attr: {
+            d: 'M17 6C17 5.95299 16.9994 5.90613 16.9981 5.85943C16.9236 3.163 14.7144 1 12 1C9.31057 1 7.11706 3.12341 7.00455 5.78518C7.00154 5.85641 7.00002 5.92803 7.00002 6M17 6H7.00002M17 6H18.3087C20.3944 6 21.4373 6 22.0335 6.66616C22.6298 7.33231 22.5146 8.36879 22.2843 10.4417L21.9884 13.1043C21.5183 17.3356 21.2832 19.4513 19.8594 20.7256C18.4356 22 16.2904 22 12 22C7.70962 22 5.56443 22 4.14063 20.7256C2.71683 19.4513 2.48176 17.3356 2.01161 13.1043L1.71577 10.4417C1.48544 8.36879 1.37028 7.33231 1.96652 6.66616C2.56276 6 3.60561 6 5.6913 6H7.00002',
+            stroke: 'currentColor',
+            strokeWidth: '2',
+            strokeLinecap: 'round',
+            strokeLinejoin: 'round',
+          },
+        },
+      ],
+    },
+    props,
+  )
+}
+
 export function Cart(props: any) {
   return GenerateIcon(
     {

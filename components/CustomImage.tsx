@@ -1,7 +1,7 @@
-import NextImage from 'next/image'
+import NextImage, { StaticImageData } from 'next/image'
 
 type imageProps = {
-  src: string
+  src: string | StaticImageData
   alt: string
   width?: number
   height?: number

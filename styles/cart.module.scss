@@ -1,0 +1,270 @@
+@use './variables' as *;
+
+.btn {
+  @include button;
+  width: 100%;
+
+  &Checkout {
+    @include button-primary;
+  }
+
+  &Secondary {
+    @include button-secondary;
+  }
+}
+
+.iconBtn {
+  cursor: pointer;
+  height: max-content;
+  border-radius: 99px;
+  padding: 4px;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(16px);
+  transition: all 0.3s;
+
+  &:hover {
+    filter: drop-shadow(0px 0px 5px rgba(245, 245, 245, 0.25));
+  }
+
+  &.disabled {
+    opacity: 0.7;
+    background: transparent;
+    cursor: not-allowed;
+
+    &:hover {
+      filter: none;
+    }
+  }
+}
+
+.cart {
+  &Wrapper {
+    width: 100vw;
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    right: 0;
+    top: 0;
+    transition: all 0.5s;
+    z-index: 1000;
+  }
+
+  &Container {
+    height: 100vh;
+    width: 600px;
+    background-color: $color-bg;
+    float: right;
+    padding: 40px 10px;
+    position: relative;
+
+    @include mobile {
+      width: 100vw;
+      padding: 15px 10px;
+    }
+  }
+
+  &Heading {
+    color: $color-white;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    gap: 2px;
+    margin-left: 10px;
+    border: none;
+    background-color: transparent;
+    width: 100%;
+
+    &Title {
+      margin-left: 10px;
+      font-size: 18px;
+      font-weight: 500;
+      font-family: 'Ubuntu', sans-serif;
+    }
+
+    &Num {
+      margin-left: 10px;
+      color: $color-primary;
+      font-size: 18px;
+      font-weight: 500;
+      font-family: 'Ubuntu', sans-serif;
+    }
+  }
+
+  &Empty {
+    margin: 40px;
+    text-align: center;
+
+    .desc {
+      font-weight: 600;
+      font-size: 20px;
+    }
+  }
+
+  &Bottom {
+    position: absolute;
+    bottom: 12px;
+    right: 5px;
+    width: 100%;
+    min-height: 15vh;
+    padding: 20px;
+    padding-bottom: 0;
+
+    @include mobile {
+      max-width: 100vw;
+    }
+
+    .total {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+
+      span {
+        font-size: 22px;
+        font-family: 'Ubuntu', sans-serif;
+      }
+    }
+
+    .btnContainer {
+      width: 400px;
+      margin: auto;
+
+      @include mobile {
+        width: 100%;
+      }
+    }
+  }
+
+  &ItemContainer {
+    margin-top: 15px;
+    overflow: auto;
+    max-height: 70vh;
+    padding: 20px 10px;
+
+    @include mobile {
+      padding: 10px;
+    }
+  }
+
+  &Item {
+    width: 100%;
+    display: flex;
+    gap: 30px;
+    padding: 10px;
+    border: 2px solid $color-border;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    cursor: pointer;
+
+    @include mobile {
+      border-radius: 12px;
+      gap: 10px;
+      padding: 0;
+    }
+
+    &:hover {
+      box-shadow: 0px 4px 15px rgba(17, 17, 17, 0.8);
+
+      .cartItemImage {
+        img {
+          transform: scale(1.15);
+          border-radius: 24px;
+        }
+      }
+    }
+
+    &Image {
+      position: relative;
+      width: 180px;
+      height: 150px;
+      border-radius: 24px;
+      background-color: #5b89ae;
+      overflow: hidden;
+      margin: -2px;
+
+      @include mobile {
+        width: 150px;
+        height: 150px;
+        border-radius: 12px;
+      }
+
+      img {
+        border-radius: 24px;
+        object-fit: cover;
+        object-position: center;
+        transition: transform 0.5s;
+
+        @include mobile {
+          border-radius: 12px;
+        }
+      }
+    }
+
+    &Desc {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 5px;
+      width: 350px;
+      margin-right: 20px;
+
+      @include mobile {
+        width: 200px;
+        margin-right: 8px;
+      }
+
+      .flex {
+        display: flex;
+        justify-content: space-between;
+
+        &.description {
+          flex-direction: column;
+        }
+      }
+
+      .description {
+        margin: 10px 0;
+
+        .title {
+          font-size: 24px;
+          width: 250px;
+          font-family: 'Ubuntu', sans-serif;
+          font-weight: bold;
+          display: inline-block;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+
+          @include mobile {
+            font-size: 18px;
+            width: 100%;
+          }
+        }
+
+        .price {
+          font-size: 28px;
+          font-family: 'Ubuntu', sans-serif;
+          font-weight: bold;
+
+          @include mobile {
+            font-size: 24px;
+          }
+        }
+      }
+    }
+
+    &Quantity {
+      display: flex;
+      align-items: center;
+
+      .num {
+        margin: 0 15px;
+        font-size: 18px;
+        font-weight: bold;
+      }
+
+      .label {
+        margin-right: 10px;
+        color: $color-gray;
+      }
+    }
+  }
+}

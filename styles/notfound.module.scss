@@ -7,6 +7,11 @@
   justify-content: center;
   color: $color-white;
   margin: 3rem auto;
+
+  @include mobile {
+    padding: 0 20px;
+    padding-top: 20vh;
+  }
 }
 
 .bg {
@@ -29,6 +34,11 @@
   font-size: 220px;
   line-height: 200px;
   margin: 10px auto;
+
+  @include mobile {
+    font-size: 150px;
+    line-height: 150px;
+  }
 
   text-shadow: 0px 22px 52px rgba(245, 245, 245, 0.3);
 }
