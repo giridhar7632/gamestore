@@ -19,7 +19,7 @@ const Meta: FC<MetaProps> = ({
   name = '',
   description = 'A place to buy amazing games for different platforms at best prices in the world.',
   image = `/og-image`,
-  url = 'http://localhost:3000',
+  url = process.env.NEXT_PUBLIC_URL,
   keywords = 'playstation,ecommerce,games',
   children,
 }) => (
