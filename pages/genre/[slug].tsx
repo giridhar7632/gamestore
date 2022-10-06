@@ -47,7 +47,7 @@ const Explore = ({ genre }) => {
         <Section title={'Games'}>
           <div className={classes.container}>
             {isLoading ? (
-              <Loader size={5} containerStyles={{ height: '80vh' }} />
+              <Loader size={5} containerStyles={{ height: '40vh' }} />
             ) : isError ? (
               <div className={classes.error} style={{ height: '100%' }}>
                 {error ? error.message : 'Something went wrong! 😕'}

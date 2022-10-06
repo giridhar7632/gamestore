@@ -1,0 +1,46 @@
+@use './variables' as *;
+
+.wrapper {
+  width: 100%;
+  min-height: 60vh;
+
+  .container {
+    width: 600px;
+    max-width: 60%;
+    margin: auto;
+    text-align: center;
+
+    @include mobile {
+      width: 90%;
+    }
+
+    h2 {
+      font-size: 36px;
+      font-weight: bold;
+      font-family: 'Ubuntu', sans-serif;
+      margin-top: 15px 0px;
+
+      @include mobile {
+        font-size: 24px;
+      }
+    }
+
+    .emailMsg {
+      font-weight: 500;
+    }
+  }
+}
+
+.email {
+  margin-left: 5px;
+  color: $color-primary;
+
+  &:hover {
+    border-bottom: 1px solid $color-primary;
+  }
+}
+
+.btn {
+  @include button;
+  @include button-secondary;
+}

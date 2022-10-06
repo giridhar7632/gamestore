@@ -11,6 +11,7 @@ specifiers:
   '@types/react-dom': 18.0.6
   '@typescript-eslint/eslint-plugin': ^5.38.0
   bcryptjs: ^2.4.3
+  canvas-confetti: ^1.5.1
   clsx: ^1.2.1
   eslint: 8.23.1
   eslint-config-next: 12.3.1
@@ -39,6 +40,7 @@ dependencies:
   '@stripe/stripe-js': 1.38.1
   '@tanstack/react-query': 4.4.0_biqbaboplfbrettd7655fr4n2y
   bcryptjs: 2.4.3
+  canvas-confetti: 1.5.1
   clsx: 1.2.1
   framer-motion: 7.3.6_biqbaboplfbrettd7655fr4n2y
   next: 12.3.1_2mygebwfgdyopr3fy2qddu2eli
@@ -1006,6 +1008,13 @@ packages:
     resolution:
       {
         integrity: sha512-QoblBnuE+rG0lc3Ur9ltP5q47lbguipa/ncNMyyGuqPk44FxbScWAeEO+k5fSQ8WekdAK4mWqNs1rADDAiN5xQ==,
+      }
+    dev: false
+
+  /canvas-confetti/1.5.1:
+    resolution:
+      {
+        integrity: sha512-Ncz+oZJP6OvY7ti4E1slxVlyAV/3g7H7oQtcCDXgwGgARxPnwYY9PW5Oe+I8uvspYNtuHviAdgA0LfcKFWJfpg==,
       }
     dev: false
 

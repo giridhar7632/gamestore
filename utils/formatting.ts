@@ -1,4 +1,26 @@
-import { Game, gamesData } from './types'
+import { Game, gamesData, Product } from './types'
+import type Stripe from 'stripe'
+
+export const formatProductforCheckOut = ({
+  title,
+  price,
+  backgroundImage,
+  quantity,
+}: Product): Stripe.Checkout.SessionCreateParams.LineItem => ({
+  price_data: {
+    currency: 'inr',
+    product_data: {
+      name: title,
+      images: [backgroundImage],
+    },
+    unit_amount: Math.round(parseFloat(price.toFixed(2)) * 100),
+  },
+  adjustable_quantity: {
+    enabled: true,
+    minimum: 1,
+  },
+  quantity,
+})
 
 export function formatGamesData(data): gamesData {
   return {

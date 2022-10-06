@@ -19,6 +19,7 @@
     "@stripe/stripe-js": "^1.38.1",
     "@tanstack/react-query": "^4.4.0",
     "bcryptjs": "^2.4.3",
+    "canvas-confetti": "^1.5.1",
     "clsx": "^1.2.1",
     "framer-motion": "^7.3.6",
     "next": "12.3.1",

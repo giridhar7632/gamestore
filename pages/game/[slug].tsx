@@ -16,6 +16,7 @@ import classes from '../../styles/game.module.scss'
 import tags from '../../styles/tag.module.scss'
 import NotFound from '../../components/NotFound'
 import { useCart } from '../../components/cart/hooks/useCart'
+import toast from 'react-hot-toast'
 
 type singleGame = {
   game: Game
@@ -41,6 +42,14 @@ const SingleGame: NextPage = ({ game }: singleGame) => {
   const { dispatch } = useCart()
   const { slug, backgroundImage, title, price, ...item } = game
   const addToCart = () => {
+    dispatch({
+      type: 'addProduct',
+      payload: { id: slug, slug, backgroundImage, title, price, quantity: 1 },
+    })
+    toast.success(`${game.title} added to the cart. 🎉`)
+  }
+
+  const buyNow = () => {
     dispatch({
       type: 'addProduct',
       payload: { id: slug, slug, backgroundImage, title, price, quantity: 1 },
@@ -88,7 +97,7 @@ const SingleGame: NextPage = ({ game }: singleGame) => {
             >
               Add To Cart
             </button>
-            <button type="button" className={`${classes.primary} ${classes.btn}`}>
+            <button type="button" onClick={buyNow} className={`${classes.primary} ${classes.btn}`}>
               Buy Now
             </button>
           </div>

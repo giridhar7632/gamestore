@@ -10,14 +10,16 @@ import CartItems from './CartItems'
 
 const Cart: FC = () => {
   const {
-    state: { totalPrice, products, cart, isOpen },
+    state: { totalPrice, products, cart },
     dispatch,
   } = useCart()
   const { mutate } = useCheckout()
 
   const handleCloseMenu = () => dispatch({ type: 'closeMenu' })
 
-  const handleCheckout = () => mutate(products)
+  const handleCheckout = () => {
+    mutate(products)
+  }
 
   return (
     <motion.div className={classes.cartWrapper}>
