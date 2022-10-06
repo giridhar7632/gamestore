@@ -19,6 +19,7 @@ import { useCart } from '../../components/cart/hooks/useCart'
 import toast from 'react-hot-toast'
 
 type singleGame = {
+  slug: string
   game: Game
 }
 
@@ -37,10 +38,13 @@ export const Section: FC<PropsWithChildren<{ [x: string]: any }>> = ({ children,
   </motion.div>
 )
 
-const SingleGame: NextPage = ({ game }: singleGame) => {
-  const { isLoading, isError, data: screenshots, error } = useGetGameScreenshots(game?.slug)
+const SingleGame: NextPage = ({ slug, game }: singleGame) => {
+  const { isLoading, isError, data: screenshots, error } = useGetGameScreenshots(slug)
   const { dispatch } = useCart()
-  const { slug, backgroundImage, title, price, ...item } = game
+
+  if (!game) return <NotFound />
+
+  const { backgroundImage, title, price, ...item } = game
   const addToCart = () => {
     dispatch({
       type: 'addProduct',
@@ -56,8 +60,6 @@ const SingleGame: NextPage = ({ game }: singleGame) => {
     })
     dispatch({ type: 'openMenu' })
   }
-
-  if (!game) return <NotFound />
 
   return (
     <Layout meta={{ name: title, description: item.description_raw }}>
@@ -218,12 +220,14 @@ export async function getStaticProps({ params }) {
     const game = await getSingleGame(params.slug)
     return {
       props: {
+        slug: params.slug,
         game,
       },
     }
   } catch (error) {
     return {
       props: {
+        slug: params.slug,
         game: undefined,
       },
     }
