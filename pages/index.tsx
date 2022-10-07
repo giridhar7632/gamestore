@@ -43,8 +43,8 @@ export default Home
 
 export async function getStaticProps() {
   const { games } = await getAllGames()
-  await generateRssFeed()
-  await generateSitemap()
+  // await generateRssFeed()
+  // await generateSitemap()
   return {
     props: { games },
   }
