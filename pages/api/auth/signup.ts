@@ -30,7 +30,7 @@ export default async function handle(req: NextApiRequest, res: NextApiResponse) 
         name,
         email,
         password: passwordHash,
-        image: `https://api.multiavatar.com/${name}.svg`,
+        image: `https://api.multiavatar.com/${name}.png`,
       },
     })
     res.status(200).json({

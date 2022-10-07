@@ -10,6 +10,8 @@ import { getAllGames } from '../lib/requests'
 import { Games } from '../utils/types'
 import genres from '../utils/genres.json'
 import Loader from '../components/Loader'
+import generateSitemap from '../lib/sitemap'
+import generateRssFeed from '../lib/rss'
 // import Cart from '../components/cart/Cart'
 
 type homeProps = {
@@ -41,6 +43,8 @@ export default Home
 
 export async function getStaticProps() {
   const { games } = await getAllGames()
+  await generateRssFeed()
+  await generateSitemap()
   return {
     props: { games },
   }

@@ -45,7 +45,6 @@ const Login: NextPage = ({ providers }: any): JSX.Element => {
         method: 'POST',
         body: data,
       })
-      console.log(res)
       toast.success('User created successfully! 😁')
       setSignin(true)
     } catch (error) {
