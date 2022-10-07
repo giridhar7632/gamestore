@@ -26,8 +26,6 @@ const Meta: FC<MetaProps> = ({
   <Head>
     <meta name="keywords" content={keywords} />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <meta name="google-site-verification" content="2MoK1TYNBlfHGllJGjNf-OjxhPujgb4FrznsWELiVkU" />
     <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="language" content="English" />
     <meta key="og_locale" property="og:locale" content="en_US" />
