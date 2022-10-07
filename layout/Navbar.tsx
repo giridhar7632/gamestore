@@ -21,7 +21,6 @@ const Navbar = () => {
     dispatch,
   } = useCart()
   const handleOpenMenu = () => {
-    console.log('open')
     dispatch({ type: 'openMenu' })
   }
   useEffect(() => {

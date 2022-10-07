@@ -21,7 +21,6 @@ export default async function getSceenshots(
       `${process.env.NEXT_PUBLIC_GAMES_API_URL}/games/${id}/screenshots?key=${process.env.NEXT_PUBLIC_GAMES_API_KEY}`,
       { method: 'GET' },
     )
-    console.log(id, fetched)
     res.status(200).json({ data: fetched?.results.map((i) => i.image) })
   } catch (error) {
     res.status(500).json({

@@ -24,8 +24,6 @@ const Home: NextPage = ({ games }: homeProps) => {
   const { data: session, status } = useSession()
   if (status === 'loading') return <Loader size={5} containerStyles={{ height: '100vh' }} />
 
-  console.log('session', session)
-
   return (
     <Layout session={session} meta={{ name: 'Discover' }}>
       <Header games={games?.slice(0, 10)} />
