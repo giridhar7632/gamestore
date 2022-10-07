@@ -1,19 +1,19 @@
 {
   "version": "https://jsonfeed.org/version/1",
   "title": "Game Store",
-  "home_page_url": "http://localhost:3000",
-  "feed_url": "http://localhost:3000/rss/feed.json",
+  "home_page_url": "https://gamestore-giridhar7632.vercel.app",
+  "feed_url": "https://gamestore-giridhar7632.vercel.app/rss/feed.json",
   "description": "A place to buy amazing games for different platforms at best prices in the world.",
-  "icon": "http://localhost:3000/og-image.png",
+  "icon": "https://gamestore-giridhar7632.vercel.app/og-image.png",
   "author": {
     "name": "Giridhar Talla",
     "url": "https://twitter.com/giridhar_talla"
   },
   "items": [
     {
-      "id": "http://localhost:3000/game/grand-theft-auto-v",
+      "id": "https://gamestore-giridhar7632.vercel.app/game/grand-theft-auto-v",
       "content_html": "Grand Theft Auto V on Game Store for 34.98 with a discount of 31%",
-      "url": "http://localhost:3000/game/grand-theft-auto-v",
+      "url": "https://gamestore-giridhar7632.vercel.app/game/grand-theft-auto-v",
       "title": "Grand Theft Auto V",
       "summary": "Grand Theft Auto V on Game Store for 34.98 with a discount of 31%",
       "date_modified": "2022-07-09T18:30:00.000Z",
@@ -23,9 +23,9 @@
       }
     },
     {
-      "id": "http://localhost:3000/game/the-witcher-3-wild-hunt",
+      "id": "https://gamestore-giridhar7632.vercel.app/game/the-witcher-3-wild-hunt",
       "content_html": "The Witcher 3: Wild Hunt on Game Store for 33.28 with a discount of 29%",
-      "url": "http://localhost:3000/game/the-witcher-3-wild-hunt",
+      "url": "https://gamestore-giridhar7632.vercel.app/game/the-witcher-3-wild-hunt",
       "title": "The Witcher 3: Wild Hunt",
       "summary": "The Witcher 3: Wild Hunt on Game Store for 33.28 with a discount of 29%",
       "date_modified": "2022-07-09T18:30:00.000Z",
@@ -35,9 +35,9 @@
       }
     },
     {
-      "id": "http://localhost:3000/game/portal-2",
+      "id": "https://gamestore-giridhar7632.vercel.app/game/portal-2",
       "content_html": "Portal 2 on Game Store for 42 with a discount of 37%",
-      "url": "http://localhost:3000/game/portal-2",
+      "url": "https://gamestore-giridhar7632.vercel.app/game/portal-2",
       "title": "Portal 2",
       "summary": "Portal 2 on Game Store for 42 with a discount of 37%",
       "date_modified": "2022-07-09T18:30:00.000Z",
@@ -47,9 +47,9 @@
       }
     },
     {
-      "id": "http://localhost:3000/game/tomb-raider",
+      "id": "https://gamestore-giridhar7632.vercel.app/game/tomb-raider",
       "content_html": "Tomb Raider (2013) on Game Store for 52.86 with a discount of 47%",
-      "url": "http://localhost:3000/game/tomb-raider",
+      "url": "https://gamestore-giridhar7632.vercel.app/game/tomb-raider",
       "title": "Tomb Raider (2013)",
       "summary": "Tomb Raider (2013) on Game Store for 52.86 with a discount of 47%",
       "date_modified": "2022-07-09T18:30:00.000Z",
@@ -59,9 +59,9 @@
       }
     },
     {
-      "id": "http://localhost:3000/game/counter-strike-global-offensive",
+      "id": "https://gamestore-giridhar7632.vercel.app/game/counter-strike-global-offensive",
       "content_html": "Counter-Strike: Global Offensive on Game Store for 42.91 with a discount of 38%",
-      "url": "http://localhost:3000/game/counter-strike-global-offensive",
+      "url": "https://gamestore-giridhar7632.vercel.app/game/counter-strike-global-offensive",
       "title": "Counter-Strike: Global Offensive",
       "summary": "Counter-Strike: Global Offensive on Game Store for 42.91 with a discount of 38%",
       "date_modified": "2022-07-09T18:30:00.000Z",
@@ -71,9 +71,9 @@
       }
     },
     {
-      "id": "http://localhost:3000/game/the-elder-scrolls-v-skyrim",
+      "id": "https://gamestore-giridhar7632.vercel.app/game/the-elder-scrolls-v-skyrim",
       "content_html": "The Elder Scrolls V: Skyrim on Game Store for 56.79 with a discount of 51%",
-      "url": "http://localhost:3000/game/the-elder-scrolls-v-skyrim",
+      "url": "https://gamestore-giridhar7632.vercel.app/game/the-elder-scrolls-v-skyrim",
       "title": "The Elder Scrolls V: Skyrim",
       "summary": "The Elder Scrolls V: Skyrim on Game Store for 56.79 with a discount of 51%",
       "date_modified": "2022-07-09T18:30:00.000Z",
@@ -83,9 +83,9 @@
       }
     },
     {
-      "id": "http://localhost:3000/game/left-4-dead-2",
+      "id": "https://gamestore-giridhar7632.vercel.app/game/left-4-dead-2",
       "content_html": "Left 4 Dead 2 on Game Store for 12.02 with a discount of 10%",
-      "url": "http://localhost:3000/game/left-4-dead-2",
+      "url": "https://gamestore-giridhar7632.vercel.app/game/left-4-dead-2",
       "title": "Left 4 Dead 2",
       "summary": "Left 4 Dead 2 on Game Store for 12.02 with a discount of 10%",
       "date_modified": "2022-07-09T18:30:00.000Z",
@@ -95,9 +95,9 @@
       }
     },
     {
-      "id": "http://localhost:3000/game/portal",
+      "id": "https://gamestore-giridhar7632.vercel.app/game/portal",
       "content_html": "Portal on Game Store for 13.53 with a discount of 12%",
-      "url": "http://localhost:3000/game/portal",
+      "url": "https://gamestore-giridhar7632.vercel.app/game/portal",
       "title": "Portal",
       "summary": "Portal on Game Store for 13.53 with a discount of 12%",
       "date_modified": "2022-07-09T18:30:00.000Z",
@@ -107,9 +107,9 @@
       }
     },
     {
-      "id": "http://localhost:3000/game/bioshock-infinite",
+      "id": "https://gamestore-giridhar7632.vercel.app/game/bioshock-infinite",
       "content_html": "BioShock Infinite on Game Store for 40.62 with a discount of 36%",
-      "url": "http://localhost:3000/game/bioshock-infinite",
+      "url": "https://gamestore-giridhar7632.vercel.app/game/bioshock-infinite",
       "title": "BioShock Infinite",
       "summary": "BioShock Infinite on Game Store for 40.62 with a discount of 36%",
       "date_modified": "2022-07-09T18:30:00.000Z",
@@ -119,9 +119,9 @@
       }
     },
     {
-      "id": "http://localhost:3000/game/life-is-strange-episode-1-2",
+      "id": "https://gamestore-giridhar7632.vercel.app/game/life-is-strange-episode-1-2",
       "content_html": "Life is Strange on Game Store for 34.39 with a discount of 30%",
-      "url": "http://localhost:3000/game/life-is-strange-episode-1-2",
+      "url": "https://gamestore-giridhar7632.vercel.app/game/life-is-strange-episode-1-2",
       "title": "Life is Strange",
       "summary": "Life is Strange on Game Store for 34.39 with a discount of 30%",
       "date_modified": "2022-07-09T18:30:00.000Z",
@@ -131,9 +131,9 @@
       }
     },
     {
-      "id": "http://localhost:3000/game/borderlands-2",
+      "id": "https://gamestore-giridhar7632.vercel.app/game/borderlands-2",
       "content_html": "Borderlands 2 on Game Store for 8.02 with a discount of 7%",
-      "url": "http://localhost:3000/game/borderlands-2",
+      "url": "https://gamestore-giridhar7632.vercel.app/game/borderlands-2",
       "title": "Borderlands 2",
       "summary": "Borderlands 2 on Game Store for 8.02 with a discount of 7%",
       "date_modified": "2022-07-09T18:30:00.000Z",
@@ -143,9 +143,9 @@
       }
     },
     {
-      "id": "http://localhost:3000/game/red-dead-redemption-2",
+      "id": "https://gamestore-giridhar7632.vercel.app/game/red-dead-redemption-2",
       "content_html": "Red Dead Redemption 2 on Game Store for 28 with a discount of false%",
-      "url": "http://localhost:3000/game/red-dead-redemption-2",
+      "url": "https://gamestore-giridhar7632.vercel.app/game/red-dead-redemption-2",
       "title": "Red Dead Redemption 2",
       "summary": "Red Dead Redemption 2 on Game Store for 28 with a discount of false%",
       "date_modified": "2022-07-09T18:30:00.000Z",
@@ -155,9 +155,9 @@
       }
     },
     {
-      "id": "http://localhost:3000/game/half-life-2",
+      "id": "https://gamestore-giridhar7632.vercel.app/game/half-life-2",
       "content_html": "Half-Life 2 on Game Store for 13.53 with a discount of 12%",
-      "url": "http://localhost:3000/game/half-life-2",
+      "url": "https://gamestore-giridhar7632.vercel.app/game/half-life-2",
       "title": "Half-Life 2",
       "summary": "Half-Life 2 on Game Store for 13.53 with a discount of 12%",
       "date_modified": "2022-07-09T18:30:00.000Z",
@@ -167,9 +167,9 @@
       }
     },
     {
-      "id": "http://localhost:3000/game/bioshock",
+      "id": "https://gamestore-giridhar7632.vercel.app/game/bioshock",
       "content_html": "BioShock on Game Store for 42.86 with a discount of 38%",
-      "url": "http://localhost:3000/game/bioshock",
+      "url": "https://gamestore-giridhar7632.vercel.app/game/bioshock",
       "title": "BioShock",
       "summary": "BioShock on Game Store for 42.86 with a discount of 38%",
       "date_modified": "2022-07-09T18:30:00.000Z",
@@ -179,9 +179,9 @@
       }
     },
     {
-      "id": "http://localhost:3000/game/limbo",
+      "id": "https://gamestore-giridhar7632.vercel.app/game/limbo",
       "content_html": "Limbo on Game Store for 10.3 with a discount of 9%",
-      "url": "http://localhost:3000/game/limbo",
+      "url": "https://gamestore-giridhar7632.vercel.app/game/limbo",
       "title": "Limbo",
       "summary": "Limbo on Game Store for 10.3 with a discount of 9%",
       "date_modified": "2022-07-09T18:30:00.000Z",
@@ -191,9 +191,9 @@
       }
     },
     {
-      "id": "http://localhost:3000/game/doom",
+      "id": "https://gamestore-giridhar7632.vercel.app/game/doom",
       "content_html": "DOOM (2016) on Game Store for 24.54 with a discount of 22%",
-      "url": "http://localhost:3000/game/doom",
+      "url": "https://gamestore-giridhar7632.vercel.app/game/doom",
       "title": "DOOM (2016)",
       "summary": "DOOM (2016) on Game Store for 24.54 with a discount of 22%",
       "date_modified": "2022-07-09T18:30:00.000Z",
@@ -203,9 +203,9 @@
       }
     },
     {
-      "id": "http://localhost:3000/game/fallout-4",
+      "id": "https://gamestore-giridhar7632.vercel.app/game/fallout-4",
       "content_html": "Fallout 4 on Game Store for 30.7 with a discount of 27%",
-      "url": "http://localhost:3000/game/fallout-4",
+      "url": "https://gamestore-giridhar7632.vercel.app/game/fallout-4",
       "title": "Fallout 4",
       "summary": "Fallout 4 on Game Store for 30.7 with a discount of 27%",
       "date_modified": "2022-07-09T18:30:00.000Z",
@@ -215,9 +215,9 @@
       }
     },
     {
-      "id": "http://localhost:3000/game/destiny-2",
+      "id": "https://gamestore-giridhar7632.vercel.app/game/destiny-2",
       "content_html": "Destiny 2 on Game Store for 32 with a discount of false%",
-      "url": "http://localhost:3000/game/destiny-2",
+      "url": "https://gamestore-giridhar7632.vercel.app/game/destiny-2",
       "title": "Destiny 2",
       "summary": "Destiny 2 on Game Store for 32 with a discount of false%",
       "date_modified": "2022-07-09T18:30:00.000Z",
@@ -227,9 +227,9 @@
       }
     },
     {
-      "id": "http://localhost:3000/game/god-of-war-2",
+      "id": "https://gamestore-giridhar7632.vercel.app/game/god-of-war-2",
       "content_html": "God of War on Game Store for 58.17 with a discount of 52%",
-      "url": "http://localhost:3000/game/god-of-war-2",
+      "url": "https://gamestore-giridhar7632.vercel.app/game/god-of-war-2",
       "title": "God of War",
       "summary": "God of War on Game Store for 58.17 with a discount of 52%",
       "date_modified": "2022-07-09T18:30:00.000Z",
@@ -239,9 +239,9 @@
       }
     },
     {
-      "id": "http://localhost:3000/game/team-fortress-2",
+      "id": "https://gamestore-giridhar7632.vercel.app/game/team-fortress-2",
       "content_html": "Team Fortress 2 on Game Store for 11.85 with a discount of 10%",
-      "url": "http://localhost:3000/game/team-fortress-2",
+      "url": "https://gamestore-giridhar7632.vercel.app/game/team-fortress-2",
       "title": "Team Fortress 2",
       "summary": "Team Fortress 2 on Game Store for 11.85 with a discount of 10%",
       "date_modified": "2022-07-09T18:30:00.000Z",
@@ -251,9 +251,9 @@
       }
     },
     {
-      "id": "http://localhost:3000/game/grounded-2",
+      "id": "https://gamestore-giridhar7632.vercel.app/game/grounded-2",
       "content_html": "Grounded on Game Store for 39.13 with a discount of 35%",
-      "url": "http://localhost:3000/game/grounded-2",
+      "url": "https://gamestore-giridhar7632.vercel.app/game/grounded-2",
       "title": "Grounded",
       "summary": "Grounded on Game Store for 39.13 with a discount of 35%",
       "date_modified": "2022-07-09T18:30:00.000Z",
@@ -263,9 +263,9 @@
       }
     },
     {
-      "id": "http://localhost:3000/game/metal-hellsinger",
+      "id": "https://gamestore-giridhar7632.vercel.app/game/metal-hellsinger",
       "content_html": "Metal: Hellsinger on Game Store for 45.45 with a discount of 40%",
-      "url": "http://localhost:3000/game/metal-hellsinger",
+      "url": "https://gamestore-giridhar7632.vercel.app/game/metal-hellsinger",
       "title": "Metal: Hellsinger",
       "summary": "Metal: Hellsinger on Game Store for 45.45 with a discount of 40%",
       "date_modified": "2022-07-09T18:30:00.000Z",
@@ -275,9 +275,9 @@
       }
     },
     {
-      "id": "http://localhost:3000/game/call-of-duty-modern-warfare-ii-open-beta",
+      "id": "https://gamestore-giridhar7632.vercel.app/game/call-of-duty-modern-warfare-ii-open-beta",
       "content_html": "Call of Duty: Modern Warfare II - Open Beta on Game Store for 85.61 with a discount of 77%",
-      "url": "http://localhost:3000/game/call-of-duty-modern-warfare-ii-open-beta",
+      "url": "https://gamestore-giridhar7632.vercel.app/game/call-of-duty-modern-warfare-ii-open-beta",
       "title": "Call of Duty: Modern Warfare II - Open Beta",
       "summary": "Call of Duty: Modern Warfare II - Open Beta on Game Store for 85.61 with a discount of 77%",
       "date_modified": "2022-07-09T18:30:00.000Z",
@@ -287,9 +287,9 @@
       }
     },
     {
-      "id": "http://localhost:3000/game/prodeus",
+      "id": "https://gamestore-giridhar7632.vercel.app/game/prodeus",
       "content_html": "Prodeus on Game Store for 26.83 with a discount of 24%",
-      "url": "http://localhost:3000/game/prodeus",
+      "url": "https://gamestore-giridhar7632.vercel.app/game/prodeus",
       "title": "Prodeus",
       "summary": "Prodeus on Game Store for 26.83 with a discount of 24%",
       "date_modified": "2022-07-09T18:30:00.000Z",
@@ -299,9 +299,9 @@
       }
     },
     {
-      "id": "http://localhost:3000/game/steelrising",
+      "id": "https://gamestore-giridhar7632.vercel.app/game/steelrising",
       "content_html": "Steelrising on Game Store for 46.26 with a discount of 41%",
-      "url": "http://localhost:3000/game/steelrising",
+      "url": "https://gamestore-giridhar7632.vercel.app/game/steelrising",
       "title": "Steelrising",
       "summary": "Steelrising on Game Store for 46.26 with a discount of 41%",
       "date_modified": "2022-07-09T18:30:00.000Z",
@@ -311,9 +311,9 @@
       }
     },
     {
-      "id": "http://localhost:3000/game/you-suck-at-parking",
+      "id": "https://gamestore-giridhar7632.vercel.app/game/you-suck-at-parking",
       "content_html": "You Suck at Parking on Game Store for 61.66 with a discount of 55%",
-      "url": "http://localhost:3000/game/you-suck-at-parking",
+      "url": "https://gamestore-giridhar7632.vercel.app/game/you-suck-at-parking",
       "title": "You Suck at Parking",
       "summary": "You Suck at Parking on Game Store for 61.66 with a discount of 55%",
       "date_modified": "2022-07-09T18:30:00.000Z",
@@ -323,9 +323,9 @@
       }
     },
     {
-      "id": "http://localhost:3000/game/return-to-monkey-island",
+      "id": "https://gamestore-giridhar7632.vercel.app/game/return-to-monkey-island",
       "content_html": "Return to Monkey Island on Game Store for 76.26 with a discount of 68%",
-      "url": "http://localhost:3000/game/return-to-monkey-island",
+      "url": "https://gamestore-giridhar7632.vercel.app/game/return-to-monkey-island",
       "title": "Return to Monkey Island",
       "summary": "Return to Monkey Island on Game Store for 76.26 with a discount of 68%",
       "date_modified": "2022-07-09T18:30:00.000Z",
@@ -335,9 +335,9 @@
       }
     },
     {
-      "id": "http://localhost:3000/game/overwatch-2",
+      "id": "https://gamestore-giridhar7632.vercel.app/game/overwatch-2",
       "content_html": "Overwatch 2 on Game Store for 38.83 with a discount of 34%",
-      "url": "http://localhost:3000/game/overwatch-2",
+      "url": "https://gamestore-giridhar7632.vercel.app/game/overwatch-2",
       "title": "Overwatch 2",
       "summary": "Overwatch 2 on Game Store for 38.83 with a discount of 34%",
       "date_modified": "2022-07-09T18:30:00.000Z",
@@ -347,9 +347,9 @@
       }
     },
     {
-      "id": "http://localhost:3000/game/moonscars",
+      "id": "https://gamestore-giridhar7632.vercel.app/game/moonscars",
       "content_html": "Moonscars on Game Store for 81.63 with a discount of 73%",
-      "url": "http://localhost:3000/game/moonscars",
+      "url": "https://gamestore-giridhar7632.vercel.app/game/moonscars",
       "title": "Moonscars",
       "summary": "Moonscars on Game Store for 81.63 with a discount of 73%",
       "date_modified": "2022-07-09T18:30:00.000Z",
@@ -359,9 +359,9 @@
       }
     },
     {
-      "id": "http://localhost:3000/game/dome-keeper",
+      "id": "https://gamestore-giridhar7632.vercel.app/game/dome-keeper",
       "content_html": "Dome Keeper on Game Store for 78.23 with a discount of 70%",
-      "url": "http://localhost:3000/game/dome-keeper",
+      "url": "https://gamestore-giridhar7632.vercel.app/game/dome-keeper",
       "title": "Dome Keeper",
       "summary": "Dome Keeper on Game Store for 78.23 with a discount of 70%",
       "date_modified": "2022-07-09T18:30:00.000Z",
@@ -371,9 +371,9 @@
       }
     },
     {
-      "id": "http://localhost:3000/game/soulstice-2",
+      "id": "https://gamestore-giridhar7632.vercel.app/game/soulstice-2",
       "content_html": "Soulstice on Game Store for 61.98 with a discount of 55%",
-      "url": "http://localhost:3000/game/soulstice-2",
+      "url": "https://gamestore-giridhar7632.vercel.app/game/soulstice-2",
       "title": "Soulstice",
       "summary": "Soulstice on Game Store for 61.98 with a discount of 55%",
       "date_modified": "2022-07-09T18:30:00.000Z",
@@ -383,9 +383,9 @@
       }
     },
     {
-      "id": "http://localhost:3000/game/beacon-pines",
+      "id": "https://gamestore-giridhar7632.vercel.app/game/beacon-pines",
       "content_html": "Beacon Pines on Game Store for 79.93 with a discount of 71%",
-      "url": "http://localhost:3000/game/beacon-pines",
+      "url": "https://gamestore-giridhar7632.vercel.app/game/beacon-pines",
       "title": "Beacon Pines",
       "summary": "Beacon Pines on Game Store for 79.93 with a discount of 71%",
       "date_modified": "2022-07-09T18:30:00.000Z",
@@ -395,9 +395,9 @@
       }
     },
     {
-      "id": "http://localhost:3000/game/trombone-champ",
+      "id": "https://gamestore-giridhar7632.vercel.app/game/trombone-champ",
       "content_html": "Trombone Champ on Game Store for 60.86 with a discount of 54%",
-      "url": "http://localhost:3000/game/trombone-champ",
+      "url": "https://gamestore-giridhar7632.vercel.app/game/trombone-champ",
       "title": "Trombone Champ",
       "summary": "Trombone Champ on Game Store for 60.86 with a discount of 54%",
       "date_modified": "2022-07-09T18:30:00.000Z",
@@ -407,9 +407,9 @@
       }
     },
     {
-      "id": "http://localhost:3000/game/splatoon-3",
+      "id": "https://gamestore-giridhar7632.vercel.app/game/splatoon-3",
       "content_html": "Splatoon 3 on Game Store for 55.89 with a discount of 50%",
-      "url": "http://localhost:3000/game/splatoon-3",
+      "url": "https://gamestore-giridhar7632.vercel.app/game/splatoon-3",
       "title": "Splatoon 3",
       "summary": "Splatoon 3 on Game Store for 55.89 with a discount of 50%",
       "date_modified": "2022-07-09T18:30:00.000Z",
@@ -419,9 +419,9 @@
       }
     },
     {
-      "id": "http://localhost:3000/game/spiderheck",
+      "id": "https://gamestore-giridhar7632.vercel.app/game/spiderheck",
       "content_html": "SpiderHeck on Game Store for 85.44 with a discount of 76%",
-      "url": "http://localhost:3000/game/spiderheck",
+      "url": "https://gamestore-giridhar7632.vercel.app/game/spiderheck",
       "title": "SpiderHeck",
       "summary": "SpiderHeck on Game Store for 85.44 with a discount of 76%",
       "date_modified": "2022-07-09T18:30:00.000Z",
@@ -431,9 +431,9 @@
       }
     },
     {
-      "id": "http://localhost:3000/game/trail-out",
+      "id": "https://gamestore-giridhar7632.vercel.app/game/trail-out",
       "content_html": "TRAIL OUT on Game Store for 84.64 with a discount of 76%",
-      "url": "http://localhost:3000/game/trail-out",
+      "url": "https://gamestore-giridhar7632.vercel.app/game/trail-out",
       "title": "TRAIL OUT",
       "summary": "TRAIL OUT on Game Store for 84.64 with a discount of 76%",
       "date_modified": "2022-07-09T18:30:00.000Z",
@@ -443,9 +443,9 @@
       }
     },
     {
-      "id": "http://localhost:3000/game/diluvian-winds-prologue",
+      "id": "https://gamestore-giridhar7632.vercel.app/game/diluvian-winds-prologue",
       "content_html": "Diluvian Winds: Prologue on Game Store for 79.17 with a discount of 71%",
-      "url": "http://localhost:3000/game/diluvian-winds-prologue",
+      "url": "https://gamestore-giridhar7632.vercel.app/game/diluvian-winds-prologue",
       "title": "Diluvian Winds: Prologue",
       "summary": "Diluvian Winds: Prologue on Game Store for 79.17 with a discount of 71%",
       "date_modified": "2022-07-09T18:30:00.000Z",
@@ -455,9 +455,9 @@
       }
     },
     {
-      "id": "http://localhost:3000/game/brotato",
+      "id": "https://gamestore-giridhar7632.vercel.app/game/brotato",
       "content_html": "Brotato on Game Store for 85.76 with a discount of 77%",
-      "url": "http://localhost:3000/game/brotato",
+      "url": "https://gamestore-giridhar7632.vercel.app/game/brotato",
       "title": "Brotato",
       "summary": "Brotato on Game Store for 85.76 with a discount of 77%",
       "date_modified": "2022-07-09T18:30:00.000Z",
@@ -467,9 +467,9 @@
       }
     },
     {
-      "id": "http://localhost:3000/game/freestylefootball-r",
+      "id": "https://gamestore-giridhar7632.vercel.app/game/freestylefootball-r",
       "content_html": "FreestyleFootball R on Game Store for 85.07 with a discount of 76%",
-      "url": "http://localhost:3000/game/freestylefootball-r",
+      "url": "https://gamestore-giridhar7632.vercel.app/game/freestylefootball-r",
       "title": "FreestyleFootball R",
       "summary": "FreestyleFootball R on Game Store for 85.07 with a discount of 76%",
       "date_modified": "2022-07-09T18:30:00.000Z",
@@ -479,9 +479,9 @@
       }
     },
     {
-      "id": "http://localhost:3000/game/the-shadow-government-simulator-prologue",
+      "id": "https://gamestore-giridhar7632.vercel.app/game/the-shadow-government-simulator-prologue",
       "content_html": "The Shadow Government Simulator: Prologue on Game Store for 84.64 with a discount of 76%",
-      "url": "http://localhost:3000/game/the-shadow-government-simulator-prologue",
+      "url": "https://gamestore-giridhar7632.vercel.app/game/the-shadow-government-simulator-prologue",
       "title": "The Shadow Government Simulator: Prologue",
       "summary": "The Shadow Government Simulator: Prologue on Game Store for 84.64 with a discount of 76%",
       "date_modified": "2022-07-09T18:30:00.000Z",
@@ -491,9 +491,9 @@
       }
     },
     {
-      "id": "http://localhost:3000/game/the-witcher-3-wild-hunt",
+      "id": "https://gamestore-giridhar7632.vercel.app/game/the-witcher-3-wild-hunt",
       "content_html": "The Witcher 3: Wild Hunt on Game Store for 33.28 with a discount of 29%",
-      "url": "http://localhost:3000/game/the-witcher-3-wild-hunt",
+      "url": "https://gamestore-giridhar7632.vercel.app/game/the-witcher-3-wild-hunt",
       "title": "The Witcher 3: Wild Hunt",
       "summary": "The Witcher 3: Wild Hunt on Game Store for 33.28 with a discount of 29%",
       "date_modified": "2022-07-09T18:30:00.000Z",
@@ -503,9 +503,9 @@
       }
     },
     {
-      "id": "http://localhost:3000/game/portal-2",
+      "id": "https://gamestore-giridhar7632.vercel.app/game/portal-2",
       "content_html": "Portal 2 on Game Store for 42 with a discount of 37%",
-      "url": "http://localhost:3000/game/portal-2",
+      "url": "https://gamestore-giridhar7632.vercel.app/game/portal-2",
       "title": "Portal 2",
       "summary": "Portal 2 on Game Store for 42 with a discount of 37%",
       "date_modified": "2022-07-09T18:30:00.000Z",
@@ -515,9 +515,9 @@
       }
     },
     {
-      "id": "http://localhost:3000/game/god-of-war-2",
+      "id": "https://gamestore-giridhar7632.vercel.app/game/god-of-war-2",
       "content_html": "God of War on Game Store for 58.17 with a discount of 52%",
-      "url": "http://localhost:3000/game/god-of-war-2",
+      "url": "https://gamestore-giridhar7632.vercel.app/game/god-of-war-2",
       "title": "God of War",
       "summary": "God of War on Game Store for 58.17 with a discount of 52%",
       "date_modified": "2022-07-09T18:30:00.000Z",
@@ -527,9 +527,9 @@
       }
     },
     {
-      "id": "http://localhost:3000/game/the-last-of-us",
+      "id": "https://gamestore-giridhar7632.vercel.app/game/the-last-of-us",
       "content_html": "The Last Of Us on Game Store for 39.9 with a discount of 35%",
-      "url": "http://localhost:3000/game/the-last-of-us",
+      "url": "https://gamestore-giridhar7632.vercel.app/game/the-last-of-us",
       "title": "The Last Of Us",
       "summary": "The Last Of Us on Game Store for 39.9 with a discount of 35%",
       "date_modified": "2022-07-09T18:30:00.000Z",
@@ -539,9 +539,9 @@
       }
     },
     {
-      "id": "http://localhost:3000/game/red-dead-redemption-2",
+      "id": "https://gamestore-giridhar7632.vercel.app/game/red-dead-redemption-2",
       "content_html": "Red Dead Redemption 2 on Game Store for 28 with a discount of false%",
-      "url": "http://localhost:3000/game/red-dead-redemption-2",
+      "url": "https://gamestore-giridhar7632.vercel.app/game/red-dead-redemption-2",
       "title": "Red Dead Redemption 2",
       "summary": "Red Dead Redemption 2 on Game Store for 28 with a discount of false%",
       "date_modified": "2022-07-09T18:30:00.000Z",
@@ -551,9 +551,9 @@
       }
     },
     {
-      "id": "http://localhost:3000/game/the-legend-of-zelda-breath-of-the-wild",
+      "id": "https://gamestore-giridhar7632.vercel.app/game/the-legend-of-zelda-breath-of-the-wild",
       "content_html": "The Legend of Zelda: Breath of the Wild on Game Store for 22.51 with a discount of 20%",
-      "url": "http://localhost:3000/game/the-legend-of-zelda-breath-of-the-wild",
+      "url": "https://gamestore-giridhar7632.vercel.app/game/the-legend-of-zelda-breath-of-the-wild",
       "title": "The Legend of Zelda: Breath of the Wild",
       "summary": "The Legend of Zelda: Breath of the Wild on Game Store for 22.51 with a discount of 20%",
       "date_modified": "2022-07-09T18:30:00.000Z",
@@ -563,9 +563,9 @@
       }
     },
     {
-      "id": "http://localhost:3000/game/it-takes-two-2",
+      "id": "https://gamestore-giridhar7632.vercel.app/game/it-takes-two-2",
       "content_html": "It Takes Two on Game Store for 45.55 with a discount of 40%",
-      "url": "http://localhost:3000/game/it-takes-two-2",
+      "url": "https://gamestore-giridhar7632.vercel.app/game/it-takes-two-2",
       "title": "It Takes Two",
       "summary": "It Takes Two on Game Store for 45.55 with a discount of 40%",
       "date_modified": "2022-07-09T18:30:00.000Z",
@@ -575,9 +575,9 @@
       }
     },
     {
-      "id": "http://localhost:3000/game/uncharted-4-a-thiefs-end",
+      "id": "https://gamestore-giridhar7632.vercel.app/game/uncharted-4-a-thiefs-end",
       "content_html": "Uncharted 4: A Thief’s End on Game Store for 24.62 with a discount of 22%",
-      "url": "http://localhost:3000/game/uncharted-4-a-thiefs-end",
+      "url": "https://gamestore-giridhar7632.vercel.app/game/uncharted-4-a-thiefs-end",
       "title": "Uncharted 4: A Thief’s End",
       "summary": "Uncharted 4: A Thief’s End on Game Store for 24.62 with a discount of 22%",
       "date_modified": "2022-07-09T18:30:00.000Z",
@@ -587,9 +587,9 @@
       }
     },
     {
-      "id": "http://localhost:3000/game/portal",
+      "id": "https://gamestore-giridhar7632.vercel.app/game/portal",
       "content_html": "Portal on Game Store for 13.53 with a discount of 12%",
-      "url": "http://localhost:3000/game/portal",
+      "url": "https://gamestore-giridhar7632.vercel.app/game/portal",
       "title": "Portal",
       "summary": "Portal on Game Store for 13.53 with a discount of 12%",
       "date_modified": "2022-07-09T18:30:00.000Z",
@@ -599,9 +599,9 @@
       }
     },
     {
-      "id": "http://localhost:3000/game/resident-evil-2-2019",
+      "id": "https://gamestore-giridhar7632.vercel.app/game/resident-evil-2-2019",
       "content_html": "Resident Evil 2 on Game Store for 58.81 with a discount of 52%",
-      "url": "http://localhost:3000/game/resident-evil-2-2019",
+      "url": "https://gamestore-giridhar7632.vercel.app/game/resident-evil-2-2019",
       "title": "Resident Evil 2",
       "summary": "Resident Evil 2 on Game Store for 58.81 with a discount of 52%",
       "date_modified": "2022-07-09T18:30:00.000Z",

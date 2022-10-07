@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>http://localhost:3000</id>
+    <id>https://gamestore-giridhar7632.vercel.app</id>
     <title>Game Store</title>
-    <updated>2022-10-07T09:24:02.311Z</updated>
+    <updated>2022-10-07T09:32:17.568Z</updated>
     <generator>Next.js using Feed for Node.js</generator>
     <author>
         <name>Giridhar Talla</name>
         <email>giridhar.talla2002@gmail.com</email>
         <uri>https://twitter.com/giridhar_talla</uri>
     </author>
-    <link rel="alternate" href="http://localhost:3000"/>
-    <link rel="self" href="http://localhost:3000/rss/atom.xml"/>
+    <link rel="alternate" href="https://gamestore-giridhar7632.vercel.app"/>
+    <link rel="self" href="https://gamestore-giridhar7632.vercel.app/rss/atom.xml"/>
     <subtitle>A place to buy amazing games for different platforms at best prices in the world.</subtitle>
-    <logo>http://localhost:3000/og-image.png</logo>
-    <icon>http://localhost:3000/favicon.ico</icon>
+    <logo>https://gamestore-giridhar7632.vercel.app/og-image.png</logo>
+    <icon>https://gamestore-giridhar7632.vercel.app/favicon.ico</icon>
     <rights>All rights reserved 2022, Giridhar Talla</rights>
     <entry>
         <title type="html"><![CDATA[Grand Theft Auto V]]></title>
-        <id>http://localhost:3000/game/grand-theft-auto-v</id>
-        <link href="http://localhost:3000/game/grand-theft-auto-v"/>
+        <id>https://gamestore-giridhar7632.vercel.app/game/grand-theft-auto-v</id>
+        <link href="https://gamestore-giridhar7632.vercel.app/game/grand-theft-auto-v"/>
         <updated>2022-07-09T18:30:00.000Z</updated>
         <summary type="html"><![CDATA[Grand Theft Auto V on Game Store for 34.98 with a discount of 31%]]></summary>
         <content type="html"><![CDATA[Grand Theft Auto V on Game Store for 34.98 with a discount of 31%]]></content>
@@ -35,8 +35,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[The Witcher 3: Wild Hunt]]></title>
-        <id>http://localhost:3000/game/the-witcher-3-wild-hunt</id>
-        <link href="http://localhost:3000/game/the-witcher-3-wild-hunt"/>
+        <id>https://gamestore-giridhar7632.vercel.app/game/the-witcher-3-wild-hunt</id>
+        <link href="https://gamestore-giridhar7632.vercel.app/game/the-witcher-3-wild-hunt"/>
         <updated>2022-07-09T18:30:00.000Z</updated>
         <summary type="html"><![CDATA[The Witcher 3: Wild Hunt on Game Store for 33.28 with a discount of 29%]]></summary>
         <content type="html"><![CDATA[The Witcher 3: Wild Hunt on Game Store for 33.28 with a discount of 29%]]></content>
@@ -53,8 +53,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[Portal 2]]></title>
-        <id>http://localhost:3000/game/portal-2</id>
-        <link href="http://localhost:3000/game/portal-2"/>
+        <id>https://gamestore-giridhar7632.vercel.app/game/portal-2</id>
+        <link href="https://gamestore-giridhar7632.vercel.app/game/portal-2"/>
         <updated>2022-07-09T18:30:00.000Z</updated>
         <summary type="html"><![CDATA[Portal 2 on Game Store for 42 with a discount of 37%]]></summary>
         <content type="html"><![CDATA[Portal 2 on Game Store for 42 with a discount of 37%]]></content>
@@ -71,8 +71,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[Tomb Raider (2013)]]></title>
-        <id>http://localhost:3000/game/tomb-raider</id>
-        <link href="http://localhost:3000/game/tomb-raider"/>
+        <id>https://gamestore-giridhar7632.vercel.app/game/tomb-raider</id>
+        <link href="https://gamestore-giridhar7632.vercel.app/game/tomb-raider"/>
         <updated>2022-07-09T18:30:00.000Z</updated>
         <summary type="html"><![CDATA[Tomb Raider (2013) on Game Store for 52.86 with a discount of 47%]]></summary>
         <content type="html"><![CDATA[Tomb Raider (2013) on Game Store for 52.86 with a discount of 47%]]></content>
@@ -89,8 +89,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[Counter-Strike: Global Offensive]]></title>
-        <id>http://localhost:3000/game/counter-strike-global-offensive</id>
-        <link href="http://localhost:3000/game/counter-strike-global-offensive"/>
+        <id>https://gamestore-giridhar7632.vercel.app/game/counter-strike-global-offensive</id>
+        <link href="https://gamestore-giridhar7632.vercel.app/game/counter-strike-global-offensive"/>
         <updated>2022-07-09T18:30:00.000Z</updated>
         <summary type="html"><![CDATA[Counter-Strike: Global Offensive on Game Store for 42.91 with a discount of 38%]]></summary>
         <content type="html"><![CDATA[Counter-Strike: Global Offensive on Game Store for 42.91 with a discount of 38%]]></content>
@@ -107,8 +107,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[The Elder Scrolls V: Skyrim]]></title>
-        <id>http://localhost:3000/game/the-elder-scrolls-v-skyrim</id>
-        <link href="http://localhost:3000/game/the-elder-scrolls-v-skyrim"/>
+        <id>https://gamestore-giridhar7632.vercel.app/game/the-elder-scrolls-v-skyrim</id>
+        <link href="https://gamestore-giridhar7632.vercel.app/game/the-elder-scrolls-v-skyrim"/>
         <updated>2022-07-09T18:30:00.000Z</updated>
         <summary type="html"><![CDATA[The Elder Scrolls V: Skyrim on Game Store for 56.79 with a discount of 51%]]></summary>
         <content type="html"><![CDATA[The Elder Scrolls V: Skyrim on Game Store for 56.79 with a discount of 51%]]></content>
@@ -125,8 +125,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[Left 4 Dead 2]]></title>
-        <id>http://localhost:3000/game/left-4-dead-2</id>
-        <link href="http://localhost:3000/game/left-4-dead-2"/>
+        <id>https://gamestore-giridhar7632.vercel.app/game/left-4-dead-2</id>
+        <link href="https://gamestore-giridhar7632.vercel.app/game/left-4-dead-2"/>
         <updated>2022-07-09T18:30:00.000Z</updated>
         <summary type="html"><![CDATA[Left 4 Dead 2 on Game Store for 12.02 with a discount of 10%]]></summary>
         <content type="html"><![CDATA[Left 4 Dead 2 on Game Store for 12.02 with a discount of 10%]]></content>
@@ -143,8 +143,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[Portal]]></title>
-        <id>http://localhost:3000/game/portal</id>
-        <link href="http://localhost:3000/game/portal"/>
+        <id>https://gamestore-giridhar7632.vercel.app/game/portal</id>
+        <link href="https://gamestore-giridhar7632.vercel.app/game/portal"/>
         <updated>2022-07-09T18:30:00.000Z</updated>
         <summary type="html"><![CDATA[Portal on Game Store for 13.53 with a discount of 12%]]></summary>
         <content type="html"><![CDATA[Portal on Game Store for 13.53 with a discount of 12%]]></content>
@@ -161,8 +161,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[BioShock Infinite]]></title>
-        <id>http://localhost:3000/game/bioshock-infinite</id>
-        <link href="http://localhost:3000/game/bioshock-infinite"/>
+        <id>https://gamestore-giridhar7632.vercel.app/game/bioshock-infinite</id>
+        <link href="https://gamestore-giridhar7632.vercel.app/game/bioshock-infinite"/>
         <updated>2022-07-09T18:30:00.000Z</updated>
         <summary type="html"><![CDATA[BioShock Infinite on Game Store for 40.62 with a discount of 36%]]></summary>
         <content type="html"><![CDATA[BioShock Infinite on Game Store for 40.62 with a discount of 36%]]></content>
@@ -179,8 +179,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[Life is Strange]]></title>
-        <id>http://localhost:3000/game/life-is-strange-episode-1-2</id>
-        <link href="http://localhost:3000/game/life-is-strange-episode-1-2"/>
+        <id>https://gamestore-giridhar7632.vercel.app/game/life-is-strange-episode-1-2</id>
+        <link href="https://gamestore-giridhar7632.vercel.app/game/life-is-strange-episode-1-2"/>
         <updated>2022-07-09T18:30:00.000Z</updated>
         <summary type="html"><![CDATA[Life is Strange on Game Store for 34.39 with a discount of 30%]]></summary>
         <content type="html"><![CDATA[Life is Strange on Game Store for 34.39 with a discount of 30%]]></content>
@@ -197,8 +197,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[Borderlands 2]]></title>
-        <id>http://localhost:3000/game/borderlands-2</id>
-        <link href="http://localhost:3000/game/borderlands-2"/>
+        <id>https://gamestore-giridhar7632.vercel.app/game/borderlands-2</id>
+        <link href="https://gamestore-giridhar7632.vercel.app/game/borderlands-2"/>
         <updated>2022-07-09T18:30:00.000Z</updated>
         <summary type="html"><![CDATA[Borderlands 2 on Game Store for 8.02 with a discount of 7%]]></summary>
         <content type="html"><![CDATA[Borderlands 2 on Game Store for 8.02 with a discount of 7%]]></content>
@@ -215,8 +215,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[Red Dead Redemption 2]]></title>
-        <id>http://localhost:3000/game/red-dead-redemption-2</id>
-        <link href="http://localhost:3000/game/red-dead-redemption-2"/>
+        <id>https://gamestore-giridhar7632.vercel.app/game/red-dead-redemption-2</id>
+        <link href="https://gamestore-giridhar7632.vercel.app/game/red-dead-redemption-2"/>
         <updated>2022-07-09T18:30:00.000Z</updated>
         <summary type="html"><![CDATA[Red Dead Redemption 2 on Game Store for 28 with a discount of false%]]></summary>
         <content type="html"><![CDATA[Red Dead Redemption 2 on Game Store for 28 with a discount of false%]]></content>
@@ -233,8 +233,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[Half-Life 2]]></title>
-        <id>http://localhost:3000/game/half-life-2</id>
-        <link href="http://localhost:3000/game/half-life-2"/>
+        <id>https://gamestore-giridhar7632.vercel.app/game/half-life-2</id>
+        <link href="https://gamestore-giridhar7632.vercel.app/game/half-life-2"/>
         <updated>2022-07-09T18:30:00.000Z</updated>
         <summary type="html"><![CDATA[Half-Life 2 on Game Store for 13.53 with a discount of 12%]]></summary>
         <content type="html"><![CDATA[Half-Life 2 on Game Store for 13.53 with a discount of 12%]]></content>
@@ -251,8 +251,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[BioShock]]></title>
-        <id>http://localhost:3000/game/bioshock</id>
-        <link href="http://localhost:3000/game/bioshock"/>
+        <id>https://gamestore-giridhar7632.vercel.app/game/bioshock</id>
+        <link href="https://gamestore-giridhar7632.vercel.app/game/bioshock"/>
         <updated>2022-07-09T18:30:00.000Z</updated>
         <summary type="html"><![CDATA[BioShock on Game Store for 42.86 with a discount of 38%]]></summary>
         <content type="html"><![CDATA[BioShock on Game Store for 42.86 with a discount of 38%]]></content>
@@ -269,8 +269,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[Limbo]]></title>
-        <id>http://localhost:3000/game/limbo</id>
-        <link href="http://localhost:3000/game/limbo"/>
+        <id>https://gamestore-giridhar7632.vercel.app/game/limbo</id>
+        <link href="https://gamestore-giridhar7632.vercel.app/game/limbo"/>
         <updated>2022-07-09T18:30:00.000Z</updated>
         <summary type="html"><![CDATA[Limbo on Game Store for 10.3 with a discount of 9%]]></summary>
         <content type="html"><![CDATA[Limbo on Game Store for 10.3 with a discount of 9%]]></content>
@@ -287,8 +287,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[DOOM (2016)]]></title>
-        <id>http://localhost:3000/game/doom</id>
-        <link href="http://localhost:3000/game/doom"/>
+        <id>https://gamestore-giridhar7632.vercel.app/game/doom</id>
+        <link href="https://gamestore-giridhar7632.vercel.app/game/doom"/>
         <updated>2022-07-09T18:30:00.000Z</updated>
         <summary type="html"><![CDATA[DOOM (2016) on Game Store for 24.54 with a discount of 22%]]></summary>
         <content type="html"><![CDATA[DOOM (2016) on Game Store for 24.54 with a discount of 22%]]></content>
@@ -305,8 +305,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[Fallout 4]]></title>
-        <id>http://localhost:3000/game/fallout-4</id>
-        <link href="http://localhost:3000/game/fallout-4"/>
+        <id>https://gamestore-giridhar7632.vercel.app/game/fallout-4</id>
+        <link href="https://gamestore-giridhar7632.vercel.app/game/fallout-4"/>
         <updated>2022-07-09T18:30:00.000Z</updated>
         <summary type="html"><![CDATA[Fallout 4 on Game Store for 30.7 with a discount of 27%]]></summary>
         <content type="html"><![CDATA[Fallout 4 on Game Store for 30.7 with a discount of 27%]]></content>
@@ -323,8 +323,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[Destiny 2]]></title>
-        <id>http://localhost:3000/game/destiny-2</id>
-        <link href="http://localhost:3000/game/destiny-2"/>
+        <id>https://gamestore-giridhar7632.vercel.app/game/destiny-2</id>
+        <link href="https://gamestore-giridhar7632.vercel.app/game/destiny-2"/>
         <updated>2022-07-09T18:30:00.000Z</updated>
         <summary type="html"><![CDATA[Destiny 2 on Game Store for 32 with a discount of false%]]></summary>
         <content type="html"><![CDATA[Destiny 2 on Game Store for 32 with a discount of false%]]></content>
@@ -341,8 +341,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[God of War]]></title>
-        <id>http://localhost:3000/game/god-of-war-2</id>
-        <link href="http://localhost:3000/game/god-of-war-2"/>
+        <id>https://gamestore-giridhar7632.vercel.app/game/god-of-war-2</id>
+        <link href="https://gamestore-giridhar7632.vercel.app/game/god-of-war-2"/>
         <updated>2022-07-09T18:30:00.000Z</updated>
         <summary type="html"><![CDATA[God of War on Game Store for 58.17 with a discount of 52%]]></summary>
         <content type="html"><![CDATA[God of War on Game Store for 58.17 with a discount of 52%]]></content>
@@ -359,8 +359,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[Team Fortress 2]]></title>
-        <id>http://localhost:3000/game/team-fortress-2</id>
-        <link href="http://localhost:3000/game/team-fortress-2"/>
+        <id>https://gamestore-giridhar7632.vercel.app/game/team-fortress-2</id>
+        <link href="https://gamestore-giridhar7632.vercel.app/game/team-fortress-2"/>
         <updated>2022-07-09T18:30:00.000Z</updated>
         <summary type="html"><![CDATA[Team Fortress 2 on Game Store for 11.85 with a discount of 10%]]></summary>
         <content type="html"><![CDATA[Team Fortress 2 on Game Store for 11.85 with a discount of 10%]]></content>
@@ -377,8 +377,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[Grounded]]></title>
-        <id>http://localhost:3000/game/grounded-2</id>
-        <link href="http://localhost:3000/game/grounded-2"/>
+        <id>https://gamestore-giridhar7632.vercel.app/game/grounded-2</id>
+        <link href="https://gamestore-giridhar7632.vercel.app/game/grounded-2"/>
         <updated>2022-07-09T18:30:00.000Z</updated>
         <summary type="html"><![CDATA[Grounded on Game Store for 39.13 with a discount of 35%]]></summary>
         <content type="html"><![CDATA[Grounded on Game Store for 39.13 with a discount of 35%]]></content>
@@ -395,8 +395,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[Metal: Hellsinger]]></title>
-        <id>http://localhost:3000/game/metal-hellsinger</id>
-        <link href="http://localhost:3000/game/metal-hellsinger"/>
+        <id>https://gamestore-giridhar7632.vercel.app/game/metal-hellsinger</id>
+        <link href="https://gamestore-giridhar7632.vercel.app/game/metal-hellsinger"/>
         <updated>2022-07-09T18:30:00.000Z</updated>
         <summary type="html"><![CDATA[Metal: Hellsinger on Game Store for 45.45 with a discount of 40%]]></summary>
         <content type="html"><![CDATA[Metal: Hellsinger on Game Store for 45.45 with a discount of 40%]]></content>
@@ -413,8 +413,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[Call of Duty: Modern Warfare II - Open Beta]]></title>
-        <id>http://localhost:3000/game/call-of-duty-modern-warfare-ii-open-beta</id>
-        <link href="http://localhost:3000/game/call-of-duty-modern-warfare-ii-open-beta"/>
+        <id>https://gamestore-giridhar7632.vercel.app/game/call-of-duty-modern-warfare-ii-open-beta</id>
+        <link href="https://gamestore-giridhar7632.vercel.app/game/call-of-duty-modern-warfare-ii-open-beta"/>
         <updated>2022-07-09T18:30:00.000Z</updated>
         <summary type="html"><![CDATA[Call of Duty: Modern Warfare II - Open Beta on Game Store for 85.61 with a discount of 77%]]></summary>
         <content type="html"><![CDATA[Call of Duty: Modern Warfare II - Open Beta on Game Store for 85.61 with a discount of 77%]]></content>
@@ -431,8 +431,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[Prodeus]]></title>
-        <id>http://localhost:3000/game/prodeus</id>
-        <link href="http://localhost:3000/game/prodeus"/>
+        <id>https://gamestore-giridhar7632.vercel.app/game/prodeus</id>
+        <link href="https://gamestore-giridhar7632.vercel.app/game/prodeus"/>
         <updated>2022-07-09T18:30:00.000Z</updated>
         <summary type="html"><![CDATA[Prodeus on Game Store for 26.83 with a discount of 24%]]></summary>
         <content type="html"><![CDATA[Prodeus on Game Store for 26.83 with a discount of 24%]]></content>
@@ -449,8 +449,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[Steelrising]]></title>
-        <id>http://localhost:3000/game/steelrising</id>
-        <link href="http://localhost:3000/game/steelrising"/>
+        <id>https://gamestore-giridhar7632.vercel.app/game/steelrising</id>
+        <link href="https://gamestore-giridhar7632.vercel.app/game/steelrising"/>
         <updated>2022-07-09T18:30:00.000Z</updated>
         <summary type="html"><![CDATA[Steelrising on Game Store for 46.26 with a discount of 41%]]></summary>
         <content type="html"><![CDATA[Steelrising on Game Store for 46.26 with a discount of 41%]]></content>
@@ -467,8 +467,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[You Suck at Parking]]></title>
-        <id>http://localhost:3000/game/you-suck-at-parking</id>
-        <link href="http://localhost:3000/game/you-suck-at-parking"/>
+        <id>https://gamestore-giridhar7632.vercel.app/game/you-suck-at-parking</id>
+        <link href="https://gamestore-giridhar7632.vercel.app/game/you-suck-at-parking"/>
         <updated>2022-07-09T18:30:00.000Z</updated>
         <summary type="html"><![CDATA[You Suck at Parking on Game Store for 61.66 with a discount of 55%]]></summary>
         <content type="html"><![CDATA[You Suck at Parking on Game Store for 61.66 with a discount of 55%]]></content>
@@ -485,8 +485,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[Return to Monkey Island]]></title>
-        <id>http://localhost:3000/game/return-to-monkey-island</id>
-        <link href="http://localhost:3000/game/return-to-monkey-island"/>
+        <id>https://gamestore-giridhar7632.vercel.app/game/return-to-monkey-island</id>
+        <link href="https://gamestore-giridhar7632.vercel.app/game/return-to-monkey-island"/>
         <updated>2022-07-09T18:30:00.000Z</updated>
         <summary type="html"><![CDATA[Return to Monkey Island on Game Store for 76.26 with a discount of 68%]]></summary>
         <content type="html"><![CDATA[Return to Monkey Island on Game Store for 76.26 with a discount of 68%]]></content>
@@ -503,8 +503,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[Overwatch 2]]></title>
-        <id>http://localhost:3000/game/overwatch-2</id>
-        <link href="http://localhost:3000/game/overwatch-2"/>
+        <id>https://gamestore-giridhar7632.vercel.app/game/overwatch-2</id>
+        <link href="https://gamestore-giridhar7632.vercel.app/game/overwatch-2"/>
         <updated>2022-07-09T18:30:00.000Z</updated>
         <summary type="html"><![CDATA[Overwatch 2 on Game Store for 38.83 with a discount of 34%]]></summary>
         <content type="html"><![CDATA[Overwatch 2 on Game Store for 38.83 with a discount of 34%]]></content>
@@ -521,8 +521,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[Moonscars]]></title>
-        <id>http://localhost:3000/game/moonscars</id>
-        <link href="http://localhost:3000/game/moonscars"/>
+        <id>https://gamestore-giridhar7632.vercel.app/game/moonscars</id>
+        <link href="https://gamestore-giridhar7632.vercel.app/game/moonscars"/>
         <updated>2022-07-09T18:30:00.000Z</updated>
         <summary type="html"><![CDATA[Moonscars on Game Store for 81.63 with a discount of 73%]]></summary>
         <content type="html"><![CDATA[Moonscars on Game Store for 81.63 with a discount of 73%]]></content>
@@ -539,8 +539,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[Dome Keeper]]></title>
-        <id>http://localhost:3000/game/dome-keeper</id>
-        <link href="http://localhost:3000/game/dome-keeper"/>
+        <id>https://gamestore-giridhar7632.vercel.app/game/dome-keeper</id>
+        <link href="https://gamestore-giridhar7632.vercel.app/game/dome-keeper"/>
         <updated>2022-07-09T18:30:00.000Z</updated>
         <summary type="html"><![CDATA[Dome Keeper on Game Store for 78.23 with a discount of 70%]]></summary>
         <content type="html"><![CDATA[Dome Keeper on Game Store for 78.23 with a discount of 70%]]></content>
@@ -557,8 +557,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[Soulstice]]></title>
-        <id>http://localhost:3000/game/soulstice-2</id>
-        <link href="http://localhost:3000/game/soulstice-2"/>
+        <id>https://gamestore-giridhar7632.vercel.app/game/soulstice-2</id>
+        <link href="https://gamestore-giridhar7632.vercel.app/game/soulstice-2"/>
         <updated>2022-07-09T18:30:00.000Z</updated>
         <summary type="html"><![CDATA[Soulstice on Game Store for 61.98 with a discount of 55%]]></summary>
         <content type="html"><![CDATA[Soulstice on Game Store for 61.98 with a discount of 55%]]></content>
@@ -575,8 +575,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[Beacon Pines]]></title>
-        <id>http://localhost:3000/game/beacon-pines</id>
-        <link href="http://localhost:3000/game/beacon-pines"/>
+        <id>https://gamestore-giridhar7632.vercel.app/game/beacon-pines</id>
+        <link href="https://gamestore-giridhar7632.vercel.app/game/beacon-pines"/>
         <updated>2022-07-09T18:30:00.000Z</updated>
         <summary type="html"><![CDATA[Beacon Pines on Game Store for 79.93 with a discount of 71%]]></summary>
         <content type="html"><![CDATA[Beacon Pines on Game Store for 79.93 with a discount of 71%]]></content>
@@ -593,8 +593,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[Trombone Champ]]></title>
-        <id>http://localhost:3000/game/trombone-champ</id>
-        <link href="http://localhost:3000/game/trombone-champ"/>
+        <id>https://gamestore-giridhar7632.vercel.app/game/trombone-champ</id>
+        <link href="https://gamestore-giridhar7632.vercel.app/game/trombone-champ"/>
         <updated>2022-07-09T18:30:00.000Z</updated>
         <summary type="html"><![CDATA[Trombone Champ on Game Store for 60.86 with a discount of 54%]]></summary>
         <content type="html"><![CDATA[Trombone Champ on Game Store for 60.86 with a discount of 54%]]></content>
@@ -611,8 +611,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[Splatoon 3]]></title>
-        <id>http://localhost:3000/game/splatoon-3</id>
-        <link href="http://localhost:3000/game/splatoon-3"/>
+        <id>https://gamestore-giridhar7632.vercel.app/game/splatoon-3</id>
+        <link href="https://gamestore-giridhar7632.vercel.app/game/splatoon-3"/>
         <updated>2022-07-09T18:30:00.000Z</updated>
         <summary type="html"><![CDATA[Splatoon 3 on Game Store for 55.89 with a discount of 50%]]></summary>
         <content type="html"><![CDATA[Splatoon 3 on Game Store for 55.89 with a discount of 50%]]></content>
@@ -629,8 +629,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[SpiderHeck]]></title>
-        <id>http://localhost:3000/game/spiderheck</id>
-        <link href="http://localhost:3000/game/spiderheck"/>
+        <id>https://gamestore-giridhar7632.vercel.app/game/spiderheck</id>
+        <link href="https://gamestore-giridhar7632.vercel.app/game/spiderheck"/>
         <updated>2022-07-09T18:30:00.000Z</updated>
         <summary type="html"><![CDATA[SpiderHeck on Game Store for 85.44 with a discount of 76%]]></summary>
         <content type="html"><![CDATA[SpiderHeck on Game Store for 85.44 with a discount of 76%]]></content>
@@ -647,8 +647,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[TRAIL OUT]]></title>
-        <id>http://localhost:3000/game/trail-out</id>
-        <link href="http://localhost:3000/game/trail-out"/>
+        <id>https://gamestore-giridhar7632.vercel.app/game/trail-out</id>
+        <link href="https://gamestore-giridhar7632.vercel.app/game/trail-out"/>
         <updated>2022-07-09T18:30:00.000Z</updated>
         <summary type="html"><![CDATA[TRAIL OUT on Game Store for 84.64 with a discount of 76%]]></summary>
         <content type="html"><![CDATA[TRAIL OUT on Game Store for 84.64 with a discount of 76%]]></content>
@@ -665,8 +665,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[Diluvian Winds: Prologue]]></title>
-        <id>http://localhost:3000/game/diluvian-winds-prologue</id>
-        <link href="http://localhost:3000/game/diluvian-winds-prologue"/>
+        <id>https://gamestore-giridhar7632.vercel.app/game/diluvian-winds-prologue</id>
+        <link href="https://gamestore-giridhar7632.vercel.app/game/diluvian-winds-prologue"/>
         <updated>2022-07-09T18:30:00.000Z</updated>
         <summary type="html"><![CDATA[Diluvian Winds: Prologue on Game Store for 79.17 with a discount of 71%]]></summary>
         <content type="html"><![CDATA[Diluvian Winds: Prologue on Game Store for 79.17 with a discount of 71%]]></content>
@@ -683,8 +683,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[Brotato]]></title>
-        <id>http://localhost:3000/game/brotato</id>
-        <link href="http://localhost:3000/game/brotato"/>
+        <id>https://gamestore-giridhar7632.vercel.app/game/brotato</id>
+        <link href="https://gamestore-giridhar7632.vercel.app/game/brotato"/>
         <updated>2022-07-09T18:30:00.000Z</updated>
         <summary type="html"><![CDATA[Brotato on Game Store for 85.76 with a discount of 77%]]></summary>
         <content type="html"><![CDATA[Brotato on Game Store for 85.76 with a discount of 77%]]></content>
@@ -701,8 +701,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[FreestyleFootball R]]></title>
-        <id>http://localhost:3000/game/freestylefootball-r</id>
-        <link href="http://localhost:3000/game/freestylefootball-r"/>
+        <id>https://gamestore-giridhar7632.vercel.app/game/freestylefootball-r</id>
+        <link href="https://gamestore-giridhar7632.vercel.app/game/freestylefootball-r"/>
         <updated>2022-07-09T18:30:00.000Z</updated>
         <summary type="html"><![CDATA[FreestyleFootball R on Game Store for 85.07 with a discount of 76%]]></summary>
         <content type="html"><![CDATA[FreestyleFootball R on Game Store for 85.07 with a discount of 76%]]></content>
@@ -719,8 +719,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[The Shadow Government Simulator: Prologue]]></title>
-        <id>http://localhost:3000/game/the-shadow-government-simulator-prologue</id>
-        <link href="http://localhost:3000/game/the-shadow-government-simulator-prologue"/>
+        <id>https://gamestore-giridhar7632.vercel.app/game/the-shadow-government-simulator-prologue</id>
+        <link href="https://gamestore-giridhar7632.vercel.app/game/the-shadow-government-simulator-prologue"/>
         <updated>2022-07-09T18:30:00.000Z</updated>
         <summary type="html"><![CDATA[The Shadow Government Simulator: Prologue on Game Store for 84.64 with a discount of 76%]]></summary>
         <content type="html"><![CDATA[The Shadow Government Simulator: Prologue on Game Store for 84.64 with a discount of 76%]]></content>
@@ -737,8 +737,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[The Witcher 3: Wild Hunt]]></title>
-        <id>http://localhost:3000/game/the-witcher-3-wild-hunt</id>
-        <link href="http://localhost:3000/game/the-witcher-3-wild-hunt"/>
+        <id>https://gamestore-giridhar7632.vercel.app/game/the-witcher-3-wild-hunt</id>
+        <link href="https://gamestore-giridhar7632.vercel.app/game/the-witcher-3-wild-hunt"/>
         <updated>2022-07-09T18:30:00.000Z</updated>
         <summary type="html"><![CDATA[The Witcher 3: Wild Hunt on Game Store for 33.28 with a discount of 29%]]></summary>
         <content type="html"><![CDATA[The Witcher 3: Wild Hunt on Game Store for 33.28 with a discount of 29%]]></content>
@@ -755,8 +755,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[Portal 2]]></title>
-        <id>http://localhost:3000/game/portal-2</id>
-        <link href="http://localhost:3000/game/portal-2"/>
+        <id>https://gamestore-giridhar7632.vercel.app/game/portal-2</id>
+        <link href="https://gamestore-giridhar7632.vercel.app/game/portal-2"/>
         <updated>2022-07-09T18:30:00.000Z</updated>
         <summary type="html"><![CDATA[Portal 2 on Game Store for 42 with a discount of 37%]]></summary>
         <content type="html"><![CDATA[Portal 2 on Game Store for 42 with a discount of 37%]]></content>
@@ -773,8 +773,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[God of War]]></title>
-        <id>http://localhost:3000/game/god-of-war-2</id>
-        <link href="http://localhost:3000/game/god-of-war-2"/>
+        <id>https://gamestore-giridhar7632.vercel.app/game/god-of-war-2</id>
+        <link href="https://gamestore-giridhar7632.vercel.app/game/god-of-war-2"/>
         <updated>2022-07-09T18:30:00.000Z</updated>
         <summary type="html"><![CDATA[God of War on Game Store for 58.17 with a discount of 52%]]></summary>
         <content type="html"><![CDATA[God of War on Game Store for 58.17 with a discount of 52%]]></content>
@@ -791,8 +791,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[The Last Of Us]]></title>
-        <id>http://localhost:3000/game/the-last-of-us</id>
-        <link href="http://localhost:3000/game/the-last-of-us"/>
+        <id>https://gamestore-giridhar7632.vercel.app/game/the-last-of-us</id>
+        <link href="https://gamestore-giridhar7632.vercel.app/game/the-last-of-us"/>
         <updated>2022-07-09T18:30:00.000Z</updated>
         <summary type="html"><![CDATA[The Last Of Us on Game Store for 39.9 with a discount of 35%]]></summary>
         <content type="html"><![CDATA[The Last Of Us on Game Store for 39.9 with a discount of 35%]]></content>
@@ -809,8 +809,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[Red Dead Redemption 2]]></title>
-        <id>http://localhost:3000/game/red-dead-redemption-2</id>
-        <link href="http://localhost:3000/game/red-dead-redemption-2"/>
+        <id>https://gamestore-giridhar7632.vercel.app/game/red-dead-redemption-2</id>
+        <link href="https://gamestore-giridhar7632.vercel.app/game/red-dead-redemption-2"/>
         <updated>2022-07-09T18:30:00.000Z</updated>
         <summary type="html"><![CDATA[Red Dead Redemption 2 on Game Store for 28 with a discount of false%]]></summary>
         <content type="html"><![CDATA[Red Dead Redemption 2 on Game Store for 28 with a discount of false%]]></content>
@@ -827,8 +827,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[The Legend of Zelda: Breath of the Wild]]></title>
-        <id>http://localhost:3000/game/the-legend-of-zelda-breath-of-the-wild</id>
-        <link href="http://localhost:3000/game/the-legend-of-zelda-breath-of-the-wild"/>
+        <id>https://gamestore-giridhar7632.vercel.app/game/the-legend-of-zelda-breath-of-the-wild</id>
+        <link href="https://gamestore-giridhar7632.vercel.app/game/the-legend-of-zelda-breath-of-the-wild"/>
         <updated>2022-07-09T18:30:00.000Z</updated>
         <summary type="html"><![CDATA[The Legend of Zelda: Breath of the Wild on Game Store for 22.51 with a discount of 20%]]></summary>
         <content type="html"><![CDATA[The Legend of Zelda: Breath of the Wild on Game Store for 22.51 with a discount of 20%]]></content>
@@ -845,8 +845,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[It Takes Two]]></title>
-        <id>http://localhost:3000/game/it-takes-two-2</id>
-        <link href="http://localhost:3000/game/it-takes-two-2"/>
+        <id>https://gamestore-giridhar7632.vercel.app/game/it-takes-two-2</id>
+        <link href="https://gamestore-giridhar7632.vercel.app/game/it-takes-two-2"/>
         <updated>2022-07-09T18:30:00.000Z</updated>
         <summary type="html"><![CDATA[It Takes Two on Game Store for 45.55 with a discount of 40%]]></summary>
         <content type="html"><![CDATA[It Takes Two on Game Store for 45.55 with a discount of 40%]]></content>
@@ -863,8 +863,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[Uncharted 4: A Thief’s End]]></title>
-        <id>http://localhost:3000/game/uncharted-4-a-thiefs-end</id>
-        <link href="http://localhost:3000/game/uncharted-4-a-thiefs-end"/>
+        <id>https://gamestore-giridhar7632.vercel.app/game/uncharted-4-a-thiefs-end</id>
+        <link href="https://gamestore-giridhar7632.vercel.app/game/uncharted-4-a-thiefs-end"/>
         <updated>2022-07-09T18:30:00.000Z</updated>
         <summary type="html"><![CDATA[Uncharted 4: A Thief’s End on Game Store for 24.62 with a discount of 22%]]></summary>
         <content type="html"><![CDATA[Uncharted 4: A Thief’s End on Game Store for 24.62 with a discount of 22%]]></content>
@@ -881,8 +881,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[Portal]]></title>
-        <id>http://localhost:3000/game/portal</id>
-        <link href="http://localhost:3000/game/portal"/>
+        <id>https://gamestore-giridhar7632.vercel.app/game/portal</id>
+        <link href="https://gamestore-giridhar7632.vercel.app/game/portal"/>
         <updated>2022-07-09T18:30:00.000Z</updated>
         <summary type="html"><![CDATA[Portal on Game Store for 13.53 with a discount of 12%]]></summary>
         <content type="html"><![CDATA[Portal on Game Store for 13.53 with a discount of 12%]]></content>
@@ -899,8 +899,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[Resident Evil 2]]></title>
-        <id>http://localhost:3000/game/resident-evil-2-2019</id>
-        <link href="http://localhost:3000/game/resident-evil-2-2019"/>
+        <id>https://gamestore-giridhar7632.vercel.app/game/resident-evil-2-2019</id>
+        <link href="https://gamestore-giridhar7632.vercel.app/game/resident-evil-2-2019"/>
         <updated>2022-07-09T18:30:00.000Z</updated>
         <summary type="html"><![CDATA[Resident Evil 2 on Game Store for 58.81 with a discount of 52%]]></summary>
         <content type="html"><![CDATA[Resident Evil 2 on Game Store for 58.81 with a discount of 52%]]></content>
