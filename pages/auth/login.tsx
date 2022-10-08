@@ -32,10 +32,9 @@ const Login: NextPage = ({ providers }: any): JSX.Element => {
   }
   const handleProvider = async (id) => {
     try {
-      const res = await signIn(id, { callbackUrl: '/' })
-      console.log(res)
+      await signIn(id, { callbackUrl: '/' })
     } catch (error) {
-      console.log(error)
+      
     }
   }
   const handleSignUp = async (data: FieldValues) => {

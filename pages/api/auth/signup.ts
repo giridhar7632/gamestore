@@ -24,7 +24,6 @@ export default async function handle(req: NextApiRequest, res: NextApiResponse) 
     }
 
     const passwordHash = await hash(password, 12)
-    console.log(password, passwordHash)
     await prisma.user.create({
       data: {
         name,

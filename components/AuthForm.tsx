@@ -144,13 +144,6 @@ const AuthForm: FC<formProps> = ({
             ) : null,
           )
         : null}
-      {/* <button
-        type="button"
-        onClick={() => console.log('facebook')}
-        className={clsx(classes.btn, classes.outlined)}
-      >
-        Continue with Facebook
-      </button> */}
     </div>
   )
 }
