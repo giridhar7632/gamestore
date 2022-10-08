@@ -13,9 +13,21 @@
   }
 }
 
+.ratingContainer {
+  @include mobile {
+    width: fit-content;
+    margin: 10px 0;
+    margin: auto;
+  }
+}
+
 .price {
   display: flex;
   align-items: center;
+
+  @include mobile {
+    justify-content: center;
+  }
 
   .cost {
     font-size: 32px;
@@ -27,12 +39,19 @@
 .btnContainer {
   margin-top: 20px;
   width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex: 1;
+
+  @include mobile {
+    flex-direction: column;
+  }
 }
 
 .btn {
   @include button;
-  margin-right: 10px;
-  width: 45%;
+  width: 49%;
 
   @include mobile {
     margin: 5px 0;
@@ -53,28 +72,28 @@
   position: relative;
   margin: 0 auto;
   max-width: 1440px;
+  margin-top: 50%;
+
+  @include mobile {
+    padding: 1rem 10px;
+  }
+
+  @include desktop {
+    margin: 10% auto;
+    padding: 3rem 5rem;
+  }
+
+  @include big-screen {
+    max-width: 1280px;
+  }
 
   &Container {
     display: inline-block;
     padding: 1rem 2rem;
     border-radius: 1rem;
     width: 100%;
-    max-width: 1080px;
+    max-width: 1180px;
     margin: auto;
-    margin-top: 50%;
-
-    @include mobile {
-      padding: 1rem 10px;
-    }
-
-    @include desktop {
-      margin: 10%;
-      padding: 3rem 5rem;
-    }
-
-    @include big-screen {
-      max-width: 1280px;
-    }
 
     .details {
       display: flex;
@@ -82,6 +101,7 @@
       @include mobile {
         flex-direction: column;
         justify-content: center;
+        align-items: center;
       }
 
       .image {
@@ -104,6 +124,15 @@
       .text {
         color: $color-white;
         margin-left: 2rem;
+        flex: 1;
+        max-width: 75%;
+
+        @include mobile {
+          text-align: center;
+          margin: auto;
+          width: 100%;
+          max-width: 100%;
+        }
 
         .title {
           font-size: 36px;
@@ -152,83 +181,82 @@
         backdrop-filter: blur(16px);
       }
     }
+  }
+}
 
-    .section {
-      width: 100%;
-      margin: 2rem auto;
-      padding: 10px;
-      background: rgba(17, 17, 17, 0.5);
-      backdrop-filter: blur(16px);
-      border-radius: 5px;
+.section {
+  width: 100%;
+  margin: 2rem auto;
+  padding: 10px;
+  background: rgba(17, 17, 17, 0.5);
+  backdrop-filter: blur(16px);
+  border-radius: 5px;
+
+  @include desktop {
+    border: 2px solid $color-border;
+    border-radius: 1rem;
+    padding: 1rem 3rem;
+  }
+
+  h2 {
+    font-size: 18px;
+    font-family: 'Ubuntu', sans-serif;
+    color: $color-white;
+    font-weight: bold;
+    margin: 20px 0;
+    padding-bottom: 10px;
+
+    border-bottom: 2px solid $color-border;
+  }
+
+  p {
+    font-size: 14px;
+    color: $color-gray;
+    font-weight: normal;
+    line-height: 120%;
+  }
+
+  .slider {
+    border-radius: 1rem;
+
+    .sliderItemImage {
+      min-width: 300px;
+      min-height: 168.75px;
+      border-radius: 10px;
+      margin: 0 10px;
+      position: relative;
 
       @include desktop {
-        padding: 1rem;
-        border: 2px solid $color-border;
-        border-radius: 1rem;
-        padding: 1rem 3rem;
+        min-width: 500px;
+        min-height: 281.25px;
       }
 
-      h2 {
-        font-size: 18px;
-        font-family: 'Ubuntu', sans-serif;
-        color: $color-white;
+      img {
+        border-radius: 5px;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+
+    .sliderItemPlatform {
+      min-width: 150px;
+      height: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 10px;
+
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      border-radius: 10px;
+
+      .name {
+        font-size: 16px;
         font-weight: bold;
-        margin: 20px 0;
-        padding-bottom: 10px;
-
-        border-bottom: 2px solid $color-border;
-      }
-
-      p {
-        font-size: 14px;
-        color: $color-gray;
-        font-weight: normal;
-        line-height: 120%;
-      }
-
-      .slider {
-        border-radius: 1rem;
-
-        .sliderItemImage {
-          min-width: 300px;
-          min-height: 168.75px;
-          border-radius: 10px;
-          margin: 0 10px;
-          position: relative;
-
-          @include desktop {
-            min-width: 500px;
-            min-height: 281.25px;
-          }
-
-          img {
-            border-radius: 5px;
-            object-fit: cover;
-            object-position: center;
-          }
-        }
-
-        .sliderItemPlatform {
-          min-width: 150px;
-          height: 100px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          margin: 0 10px;
-
-          background-position: center;
-          background-size: cover;
-          background-repeat: no-repeat;
-          border-radius: 10px;
-
-          .name {
-            font-size: 16px;
-            font-weight: bold;
-            font-family: 'Ubuntu', sans-serif;
-            line-height: 100%;
-            color: $color-white;
-          }
-        }
+        font-family: 'Ubuntu', sans-serif;
+        line-height: 100%;
+        color: $color-white;
       }
     }
   }

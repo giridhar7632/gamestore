@@ -69,7 +69,9 @@ const SingleGame: NextPage = ({ slug, game }: singleGame) => {
                   Official Website
                 </Link>
               </div>
-              <Rating value={parseInt(`${item.rating}`)} count={item.ratings_count} />
+              <div className={classes.ratingContainer}>
+                <Rating value={parseInt(`${item.rating}`)} count={item.ratings_count} />
+              </div>
               <div className={classes.price}>
                 <div className={classes.cost}>$ {price} </div>
                 {item.off ? <div className={tags.bigTag}>{`-${item.off}%`}</div> : null}
