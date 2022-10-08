@@ -117,12 +117,22 @@
 
 .mobileNav {
   width: 100vw;
-  padding: 30px 15px 0 15px;
+  padding: 15px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   position: fixed;
+  top: 0;
   z-index: 99;
+  transition: 0.3s linear;
+
+  background-color: rgba(245, 245, 245, 0.25);
+  backdrop-filter: blur(16px);
+  border-radius: 0 0 1rem 1rem;
+
+  &.hide {
+    top: -70px;
+  }
 }
 
 .icons {
@@ -202,6 +212,7 @@
   flex-direction: column;
   transform: translatex(100%);
   transition: transform 0.4s ease-in-out;
+  background-color: $color-black;
 
   .sidebarMenu {
     display: flex;

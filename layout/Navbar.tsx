@@ -14,6 +14,8 @@ const Navbar = () => {
   const { session, signOut } = useAuth()
   const [time, setTime] = useState(getTime())
   const [active, setActive] = useState(false)
+  const [show, setShow] = useState(true)
+  const [lastScrollY, setLastScrollY] = useState(0)
   const { width } = useWindowSize()
   const { pathname } = useRouter()
   const {
@@ -24,6 +26,28 @@ const Navbar = () => {
     console.log('open')
     dispatch({ type: 'openMenu' })
   }
+  const controlNavbar = () => {
+    if (typeof window !== 'undefined') {
+      if (window.scrollY > lastScrollY) {
+        // if scroll down hide the navbar
+        setShow(false)
+      } else {
+        setShow(true)
+      }
+      setLastScrollY(window.scrollY)
+    }
+  }
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      window.addEventListener('scroll', controlNavbar)
+      return () => {
+        window.removeEventListener('scroll', controlNavbar)
+      }
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [lastScrollY])
+
   useEffect(() => {
     const interval = setInterval(() => {
       setTime(getTime())
@@ -118,23 +142,39 @@ const Navbar = () => {
       </nav>
     </div>
   ) : (
-    <div className={classes.mobileNav}>
+    <div className={clsx(classes.mobileNav, !show && classes.hide)}>
       <Link href="" className={classes.logo}>
         <Logo size={30} />
         {width > 720 ? <span className={classes.logoText}>Game Store</span> : null}
       </Link>
       <div style={{ display: 'flex', alignItems: 'center' }}>
-        <div className={classes.icons}>
-          {/* <Heart className={classes.navItem} size={30} /> */}
-          <CartIcon className={classes.navItem} size={30} onClick={handleOpenMenu} />
-          <Image
-            className={classes.navItem}
-            src="https://api.multiavatar.com/giridhar.svg"
-            alt="giridhar"
-            width={40}
-            height={40}
-          />
-        </div>
+        {session ? (
+          <div className={classes.icons}>
+            {/* <Heart className={classes.navItem} size={30} /> */}
+            <span
+              className={clsx(classes.navItem, classes.icon, classes.badgeContainer)}
+              onClickCapture={handleOpenMenu}
+            >
+              <CartIcon size={30} />
+              {cart ? <div className={classes.badge}>{cart}</div> : null}
+            </span>
+            <span className={clsx(classes.navItem, classes.profile)}>
+              <Image
+                src={session.user.image}
+                alt={session.user.name}
+                width={40}
+                height={40}
+                style={{ display: 'inline-flex', alignSelf: 'center' }}
+              />
+            </span>
+          </div>
+        ) : (
+          <Link href="/auth/login">
+            <button className={clsx(classes.btn, classes.btnPrimary)} type={'button'}>
+              Log in
+            </button>
+          </Link>
+        )}
 
         <div
           onClick={() => setActive((prev) => !prev)}
@@ -158,6 +198,13 @@ const Navbar = () => {
                 Deals
               </Link>
             ) : null}
+            <button
+              className={clsx(classes.mobileNavItem, classes.btn, classes.btnSecondary)}
+              type={'button'}
+              onClick={() => signOut()}
+            >
+              Log out
+            </button>
             {/* <Link className={classes.mobileNavItem} href="/browse">
               Search
             </Link> */}
