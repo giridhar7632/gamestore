@@ -3,3 +3,14 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 ## 🎮 GameStore
 
 A place where you can explore and buy exciting video games online.
+
+#### Tech Stack:
+
+- TypeScript
+- Sass
+- React
+- Next.js
+- Authentication
+- PostgreSQL database
+- Prisma ORM
+- Stripe
