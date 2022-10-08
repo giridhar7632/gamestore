@@ -1,8 +1,6 @@
-import { FC, PropsWithChildren, useEffect, useState } from 'react'
-import { motion } from 'framer-motion'
+import toast from 'react-hot-toast'
 import Rating from '../../components/Rating'
 import Image from '../../components/CustomImage'
-import Link from '../../components/CustomLink'
 import Layout from '../../layout/Layout'
 import { getAllGames, getLatest, getSingleGame, getTrending } from '../../lib/requests'
 import SliderContainer from '../../components/SliderContainer'
@@ -11,36 +9,23 @@ import { Progress } from '../../components/Progress'
 import { NextPage } from 'next'
 import { Game } from '../../utils/types'
 import Loader from '../../components/Loader'
-import { useGetGameScreenshots } from '../../lib/hooks/useGetGames'
 import classes from '../../styles/game.module.scss'
 import tags from '../../styles/tag.module.scss'
 import NotFound from '../../components/NotFound'
 import { useCart } from '../../components/cart/hooks/useCart'
-import toast from 'react-hot-toast'
+import { useAuth } from '../../lib/hooks/useAuth'
+import Link from '../../components/CustomLink'
+import { useGetGameScreenshots } from '../../lib/hooks/useGetGames'
 
 type singleGame = {
   slug: string
   game: Game
 }
 
-export const Section: FC<PropsWithChildren<{ [x: string]: any }>> = ({ children, ...props }) => (
-  <motion.div
-    initial={{ opacity: 0, y: 300 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    viewport={{ once: true }}
-    transition={{
-      y: { type: 'spring', stiffness: 300, damping: 30 },
-      duration: 0.2,
-    }}
-    {...props}
-  >
-    {children}
-  </motion.div>
-)
-
 const SingleGame: NextPage = ({ slug, game }: singleGame) => {
   const { isLoading, isError, data: screenshots, error } = useGetGameScreenshots(slug)
   const { dispatch } = useCart()
+  const { session } = useAuth()
 
   if (!game) return <NotFound />
 
@@ -71,7 +56,7 @@ const SingleGame: NextPage = ({ slug, game }: singleGame) => {
       />
       <main className={classes.game}>
         <div className={classes.gameContainer}>
-          <Section className={classes.details}>
+          <div className={classes.details}>
             <div className={classes.image}>
               <Image src={backgroundImage} alt={''} layout="fill" />
             </div>
@@ -90,38 +75,45 @@ const SingleGame: NextPage = ({ slug, game }: singleGame) => {
                 {item.off ? <div className={tags.bigTag}>{`-${item.off}%`}</div> : null}
               </div>
             </div>
-          </Section>
-          <div className={classes.btnContainer}>
-            <button
-              type="button"
-              onClick={addToCart}
-              className={`${classes.secondary} ${classes.btn}`}
-            >
-              Add To Cart
-            </button>
-            <button type="button" onClick={buyNow} className={`${classes.primary} ${classes.btn}`}>
-              Buy Now
-            </button>
           </div>
+          {session ? (
+            <div className={classes.btnContainer}>
+              <button
+                type="button"
+                onClick={addToCart}
+                className={`${classes.secondary} ${classes.btn}`}
+              >
+                Add To Cart
+              </button>
+              <button
+                type="button"
+                onClick={buyNow}
+                className={`${classes.primary} ${classes.btn}`}
+              >
+                Buy Now
+              </button>
+            </div>
+          ) : (
+            <div style={{ width: '80%', margin: '30px auto' }}>
+              <Link href="/auth/login">
+                <button
+                  type="button"
+                  className={`${classes.primary} ${classes.btn}`}
+                  style={{ width: '100%' }}
+                >
+                  Login to Access Cart
+                </button>
+              </Link>
+            </div>
+          )}
           <div className={classes.genres}>
             {game?.genres?.map((i) => (
-              <span className={classes.genre} key={i.id}>
-                {i.name}
-              </span>
-            ))}
-          </div>
-          {/* <div className={classes.genres}>
-            {game?.genres?.map((i) => (
-              <Link
-                href={`/genre/${i.slug}`}
-                className={classes.genre}
-                key={i.id}
-              >
+              <Link href={`/genre/${i.slug}`} className={classes.genre} key={i.id}>
                 {i.name}
               </Link>
             ))}
-          </div> */}
-          <Section className={classes.section}>
+          </div>
+          <div className={classes.section}>
             <h2>ScreenShots</h2>
             <div className={classes.slider}>
               {isLoading ? (
@@ -152,13 +144,13 @@ const SingleGame: NextPage = ({ slug, game }: singleGame) => {
                 </SliderContainer>
               )}
             </div>
-          </Section>
+          </div>
 
-          <Section className={classes.section}>
+          <div className={classes.section}>
             <h2>Description</h2>
             <div dangerouslySetInnerHTML={{ __html: item.description }}></div>
-          </Section>
-          <Section className={classes.section}>
+          </div>
+          <div className={classes.section}>
             <h2>Ratings & Reviews</h2>
             <div className={classes.ratingReview}>
               <div className={classes.rating}>
@@ -185,10 +177,10 @@ const SingleGame: NextPage = ({ slug, game }: singleGame) => {
                 ))}
               </div>
             </div>
-          </Section>
+          </div>
 
           {game?.platforms.length ? (
-            <Section className={classes.section}>
+            <div className={classes.section}>
               <h2>Platforms</h2>
               <div className={classes.slider}>
                 <SliderContainer>
@@ -205,7 +197,7 @@ const SingleGame: NextPage = ({ slug, game }: singleGame) => {
                   ))}
                 </SliderContainer>
               </div>
-            </Section>
+            </div>
           ) : null}
         </div>
       </main>
