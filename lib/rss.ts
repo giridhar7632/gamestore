@@ -32,18 +32,18 @@ async function generateRssFeed() {
     },
     author,
   })
-  const { games: posts1 } = await getAllGames()
-  const { games: posts2 } = await getLatest()
-  const { games: posts3 } = await getTrending()
-  const posts = [...posts1, ...posts2, ...posts3]
-  posts.forEach((post) => {
-    const url = `${baseUrl}/game/${post.slug}`
+  const { games: games1 } = await getAllGames()
+  const { games: games2 } = await getLatest()
+  const { games: games3 } = await getTrending()
+  const games = [...games1, ...games2, ...games3]
+  games.forEach((game) => {
+    const url = `${baseUrl}/game/${game.slug}`
     feed.addItem({
-      title: post.title,
+      title: game.title,
       id: url,
       link: url,
-      description: `${post.title} on Game Store for ${post.price} with a discount of ${post.off}%`,
-      content: `${post.title} on Game Store for ${post.price} with a discount of ${post.off}%`,
+      description: `${game.title} on Game Store for ${game.price} with a discount of ${game.off}%`,
+      content: `${game.title} on Game Store for ${game.price} with a discount of ${game.off}%`,
       author: [author],
       contributor: [author],
       date: new Date('07-10-2022'),

@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
 import Game from '../components/Cards/Game'
 import Section from '../components/MainPage/Section'
-import genres from '../utils/genres.json'
 import Layout from '../layout/Layout'
 import { ExploreGenres } from '../components/Genres'
 import useWindowSize from '../lib/hooks/useWindowSize'
@@ -11,8 +10,9 @@ import Loader from '../components/Loader'
 import classes from '../styles/explore.module.scss'
 import { ChevronLeft, ChevronRight } from '../utils/icons'
 import { removeUndefined } from '../utils/removeUndefined'
+import { getAllGenres } from '../lib/requests'
 
-const Explore = () => {
+const Explore = ({ genres }) => {
   const router = useRouter()
   const { pathname, query } = router
   const [page, setPage] = useState<number>(parseInt(`${query?.page}`) || 1)
@@ -35,7 +35,7 @@ const Explore = () => {
     <Layout meta={{ name: 'Explore' }}>
       <div className={classes.explore}>
         <Section title={'Genres'} style={{ marginTop: 30 }}>
-          <ExploreGenres genres={genres?.results} />
+          <ExploreGenres genres={genres} />
         </Section>
         <Section title={'Games'}>
           <div className={classes.container}>
@@ -86,3 +86,12 @@ const Explore = () => {
 }
 
 export default Explore
+
+export async function getStaticProps() {
+  const { results: genres } = await getAllGenres()
+  // await generateRssFeed()
+  // await generateSitemap()
+  return {
+    props: { genres },
+  }
+}

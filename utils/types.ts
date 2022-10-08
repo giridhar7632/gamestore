@@ -23,6 +23,23 @@ export type Genres = {
   slug: string
   games_count?: number
   image_background?: string
+  games?: any
+}
+
+export type GenreData = {
+  id: number | string
+  name: string
+  slug: string
+  games_count?: number
+  image_background?: string
+  description?: string
+}
+
+export type genresData = {
+  count: number | string
+  next: null
+  previous: null
+  results: Genres[]
 }
 
 export type Ratings = {

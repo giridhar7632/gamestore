@@ -2,7 +2,7 @@ import { stringify } from 'qs'
 import { fetcher } from '../utils/fetcher'
 import { formatGamesData, formatSingleGame } from '../utils/formatting'
 import { removeUndefined } from '../utils/removeUndefined'
-import { gamesData } from '../utils/types'
+import { gamesData, Genres, genresData } from '../utils/types'
 
 export function getTime(): string {
   const date = new Date()
@@ -21,6 +21,16 @@ export const getAllGames = async (query?: any): Promise<gamesData> => {
     method: 'GET',
   })
   return formatGamesData(data)
+}
+
+export const getAllGenres = async (): Promise<genresData> => {
+  const data = await fetcher(
+    `${process.env.NEXT_PUBLIC_GAMES_API_URL}/genres?key=${process.env.NEXT_PUBLIC_GAMES_API_KEY}`,
+    {
+      method: 'GET',
+    },
+  )
+  return data
 }
 
 // https://rawg.io/api/games/lists/recent-games-past
@@ -48,6 +58,14 @@ export const getSingleGame = async (id: string | number) => {
     { method: 'GET' },
   )
   return formatSingleGame(data)
+}
+
+export const getGenreData = async (id: string | number) => {
+  const data = await fetcher(
+    `${process.env.NEXT_PUBLIC_GAMES_API_URL}/genres/${id}?key=${process.env.NEXT_PUBLIC_GAMES_API_KEY}`,
+    { method: 'GET' },
+  )
+  return data
 }
 
 // https://api.rawg.io/api/games/portal-2/screenshots?key=0b540e1257c341d49497411930f43686

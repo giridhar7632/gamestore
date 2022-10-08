@@ -6,9 +6,8 @@ import GamesSlider from '../components/MainPage/GamesSlider'
 import Header from '../components/MainPage/Header'
 import Section from '../components/MainPage/Section'
 import TrendingSection from '../components/MainPage/Trending'
-import { getAllGames } from '../lib/requests'
-import { Games } from '../utils/types'
-import genres from '../utils/genres.json'
+import { getAllGames, getAllGenres } from '../lib/requests'
+import { Games, Genres } from '../utils/types'
 import Loader from '../components/Loader'
 import generateSitemap from '../lib/sitemap'
 import generateRssFeed from '../lib/rss'
@@ -16,11 +15,12 @@ import generateRssFeed from '../lib/rss'
 
 type homeProps = {
   games: Games[]
+  genres: Genres[]
   latest: Games[]
   trending: Games[]
 }
 
-const Home: NextPage = ({ games }: homeProps) => {
+const Home: NextPage = ({ games, genres }: homeProps) => {
   const { data: session, status } = useSession()
   if (status === 'loading') return <Loader size={5} containerStyles={{ height: '100vh' }} />
 
@@ -32,7 +32,7 @@ const Home: NextPage = ({ games }: homeProps) => {
       <TrendingSection title={'Trending'} />
       <GamesSlider title={'Latest Releases'} />
       <Section title={'Genres'}>
-        <DiscoverGenres genres={genres?.results} />
+        <DiscoverGenres genres={genres} />
       </Section>
     </Layout>
   )
@@ -43,9 +43,10 @@ export default Home
 
 export async function getStaticProps() {
   const { games } = await getAllGames()
+  const { results: genres } = await getAllGenres()
   // await generateRssFeed()
   // await generateSitemap()
   return {
-    props: { games },
+    props: { games, genres },
   }
 }

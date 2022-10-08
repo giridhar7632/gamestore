@@ -1,3 +1,4 @@
+import clsx from 'clsx'
 import { useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
 import Game from '../../components/Cards/Game'
@@ -9,12 +10,13 @@ import Loader from '../../components/Loader'
 import classes from '../../styles/genre.module.scss'
 import { ChevronLeft, ChevronRight } from '../../utils/icons'
 import { removeUndefined } from '../../utils/removeUndefined'
-import genres from '../../utils/genres.json'
+import { getAllGenres, getGenreData } from '../../lib/requests'
 
-const Explore = ({ genre }) => {
+const Genre = ({ genre }) => {
   const router = useRouter()
   const { pathname, query } = router
   const [page, setPage] = useState<number>(parseInt(`${query?.page}`) || 1)
+  const [showMore, setShowMore] = useState<boolean>(false)
   const { isLoading, isError, data, error } = useGetGames({ page, genre: genre.slug })
   const { width } = useWindowSize()
   const changeQuery = (page) =>
@@ -25,23 +27,32 @@ const Explore = ({ genre }) => {
         page,
       }),
     })
-
   useEffect(() => {
     page > 1 && changeQuery(page)
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [page])
 
   return (
-    <Layout meta={{ name: genre.name }}>
+    <Layout meta={{ name: genre.name, description: genre.description }}>
       <div
         className={classes.bg}
         style={{
           backgroundImage: `linear-gradient(to bottom, rgba(17, 17, 17, 0.35), rgba(17, 17, 17, 0.4)), url(${genre.image_background})`,
         }}
       />
-      <div className={classes.title}>
-        <div className={classes.background}>{genre.name}</div>
-        <div className={classes.text}>{genre.name}</div>
+      <div className={classes.description}>
+        <div className={classes.title}>
+          <div className={classes.background}>{genre.name}</div>
+          <div className={classes.text}>{genre.name}</div>
+        </div>
+        <div className={classes.games}>{genre.games_count} Games</div>
+        <div
+          className={clsx(classes.genreDescription, showMore && classes.showMore)}
+          dangerouslySetInnerHTML={{ __html: genre.description }}
+        ></div>
+        <div className={classes.btn} onClick={() => setShowMore((prev) => !prev)}>
+          show {showMore ? 'less' : 'more'}
+        </div>
       </div>
       <div className={classes.genre}>
         <Section title={'Games'}>
@@ -92,10 +103,10 @@ const Explore = ({ genre }) => {
   )
 }
 
-export default Explore
+export default Genre
 
 export async function getStaticProps({ params }) {
-  const genre = genres.results?.find((i) => i.slug === params.slug)
+  const genre = await getGenreData(params.slug)
   return {
     props: {
       genre,
@@ -104,8 +115,9 @@ export async function getStaticProps({ params }) {
 }
 
 export async function getStaticPaths() {
+  const { results: genres } = await getAllGenres()
   return {
-    paths: genres.results.map((game) => {
+    paths: genres.map((game) => {
       return {
         params: {
           slug: game.slug,

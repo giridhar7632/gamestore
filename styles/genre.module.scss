@@ -14,42 +14,82 @@
   }
 }
 
-.title {
-  width: max-content;
+.description {
+  width: 95%;
   position: relative;
   margin: 1rem auto;
-  margin-top: 10%;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  font-family: 'Ubuntu', sans-serif;
+  margin-top: 50%;
 
-  .background {
-    position: absolute;
-    font-size: 56px;
-    font-weight: bolder;
-    text-transform: uppercase;
-    -webkit-text-fill-color: transparent;
-    -webkit-font-smoothing: antialiased;
-    -webkit-text-stroke: 1px;
-    z-index: 1;
-    opacity: 0.5;
-    line-height: 100%;
+  @include desktop {
+    width: 70%;
+    margin-top: 10%;
+  }
 
-    @include desktop {
-      font-size: 120px;
+  .title {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    font-family: 'Ubuntu', sans-serif;
+    position: relative;
+
+    .background {
+      position: absolute;
+      font-size: 56px;
+      font-weight: bolder;
+      text-transform: uppercase;
+      -webkit-text-fill-color: transparent;
+      -webkit-font-smoothing: antialiased;
+      -webkit-text-stroke: 1px;
+      z-index: 1;
+      opacity: 0.5;
+      line-height: 100%;
+
+      @include desktop {
+        font-size: 120px;
+      }
+    }
+
+    .text {
+      font-weight: 700;
+      font-size: 48px;
+      color: $color-white;
+      z-index: 3;
+
+      @include desktop {
+        font-size: 72px;
+      }
     }
   }
 
-  .text {
-    font-weight: 700;
-    font-size: 48px;
+  .games {
+    font-weight: 500;
+    font-size: 20px;
     color: $color-white;
-    z-index: 3;
+    text-align: center;
+    margin: 15px auto;
+  }
 
-    @include desktop {
-      font-size: 72px;
+  .genreDescription {
+    text-align: center;
+    font-size: 18px;
+    // width: 100%;
+    height: 280px;
+    // display: inline-block;
+    overflow: hidden;
+
+    &.showMore {
+      overflow: scroll;
     }
+
+    text-overflow: ellipsis;
+  }
+
+  .btn {
+    margin: 10px auto;
+    width: 100%;
+    text-align: center;
+    @include button;
+    @include button-secondary;
   }
 }
 

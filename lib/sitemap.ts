@@ -1,5 +1,4 @@
-import { getAllGames, getLatest, getTrending } from './requests'
-import genres from '../utils/genres.json'
+import { getAllGames, getLatest, getTrending, getAllGenres } from './requests'
 import { globby } from 'globby'
 import { SitemapStream, streamToPromise } from 'sitemap'
 import { Readable } from 'stream'
@@ -30,22 +29,22 @@ async function generateSitemap() {
         : { url: path, changefreq: 'daily', priority: 0.7 }
     })
     .filter((page) => !blocklist.includes(page.url))
-  // post routes
-  const { games: posts1 } = await getAllGames()
-  const { games: posts2 } = await getLatest()
-  const { games: posts3 } = await getTrending()
-  const posts = [...posts1, ...posts2, ...posts3]
-  const postLinks = posts.map((post) => ({
-    url: `/game/${post.slug}`,
+  // game routes
+  const { games: games1 } = await getAllGames()
+  const { games: games2 } = await getLatest()
+  const { games: games3 } = await getTrending()
+  const games = [...games1, ...games2, ...games3]
+  const gameLinks = games.map((game) => ({
+    url: `/game/${game.slug}`,
     changefreq: 'daily',
     priority: 0.7,
   }))
-  // tag routes
-  const tags = await genres.results
-  const tagLinks = tags.map((tag) => ({
-    url: `/genre/${tag.slug}`,
+  // genre routes
+  const { results: genres } = await getAllGenres()
+  const genreLinks = genres.map((genre) => ({
+    url: `/genre/${genre.slug}`,
   }))
-  const links = [...pageLinks, ...postLinks, ...tagLinks]
+  const links = [...pageLinks, ...gameLinks, ...genreLinks]
   const stream = new SitemapStream({ hostname: baseUrl })
   const xml = await streamToPromise(Readable.from(links).pipe(stream)).then((data) =>
     data.toString(),
