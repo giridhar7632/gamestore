@@ -95,6 +95,10 @@
     max-width: 1180px;
     margin: auto;
 
+    @include mobile {
+      padding: 10px;
+    }
+
     .details {
       display: flex;
 
