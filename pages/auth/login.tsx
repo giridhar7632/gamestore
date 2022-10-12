@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { NextPage } from 'next'
-import Router from 'next/router'
+import Router, { useRouter } from 'next/router'
 import toast from 'react-hot-toast'
 import { FieldValues } from 'react-hook-form'
 import { AnimatePresence, motion } from 'framer-motion'
@@ -12,6 +12,7 @@ import Meta from '../../layout/Meta'
 import { getProviders, getSession } from 'next-auth/react'
 
 const Login: NextPage = ({ providers }: any): JSX.Element => {
+  const { query } = useRouter()
   const { signIn } = useAuth()
   const [signin, setSignin] = useState(true)
   const [loading, setLoading] = useState(false)
@@ -23,7 +24,7 @@ const Login: NextPage = ({ providers }: any): JSX.Element => {
     })
     if (res.ok) {
       toast.success('Sign in successful! 😁')
-      Router.replace('/')
+      Router.replace(`/${query.next ? query.next : ''}`)
     } else {
       toast.error(res.error)
     }
@@ -32,9 +33,9 @@ const Login: NextPage = ({ providers }: any): JSX.Element => {
   }
   const handleProvider = async (id) => {
     try {
-      await signIn(id, { callbackUrl: '/' })
+      await signIn(id, { callbackUrl: `/${query.next ? query.next : ''}` })
     } catch (error) {
-      
+      toast.error('Something went wrong! 😅')
     }
   }
   const handleSignUp = async (data: FieldValues) => {

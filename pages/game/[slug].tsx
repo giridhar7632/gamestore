@@ -97,7 +97,7 @@ const SingleGame: NextPage = ({ slug, game }: singleGame) => {
             </div>
           ) : (
             <div style={{ width: '80%', margin: '30px auto' }}>
-              <Link href="/auth/login">
+              <Link href={`/auth/login?next=game/${slug}`}>
                 <button
                   type="button"
                   className={`${classes.primary} ${classes.btn}`}
