@@ -9,9 +9,9 @@ import TrendingSection from '../components/MainPage/Trending'
 import { getAllGames, getAllGenres } from '../lib/requests'
 import { Games, Genres } from '../utils/types'
 import Loader from '../components/Loader'
-import generateSitemap from '../lib/sitemap'
-import generateRssFeed from '../lib/rss'
-// import Cart from '../components/cart/Cart'
+// import generateSitemap from '../lib/sitemap'
+// import generateRssFeed from '../lib/rss'
+import Banner from '../components/MainPage/Banner'
 
 type homeProps = {
   games: Games[]
@@ -29,12 +29,12 @@ const Home: NextPage = ({ games, genres }: homeProps) => {
       <Header games={games?.slice(0, 10)} />
       <TrendingSection title={'Trending'} />
       <GamesSlider title={'Latest Releases'} />
+      <Banner />
       <Section title={'Genres'}>
         <DiscoverGenres genres={genres} />
       </Section>
     </Layout>
   )
-  // return <Cart />
 }
 
 export default Home

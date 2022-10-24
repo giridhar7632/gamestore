@@ -1,12 +1,57 @@
 @use './variables' as *;
 
 .banner {
+  position: relative;
   width: '100%';
-  max-width: 1440px;
+  max-width: 1920px;
   height: 424px;
+  margin: 1rem auto;
   background-image: url('/banner.png');
 
-  @include tablet {
-    height: 238.5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 2rem;
+
+  @include desktop {
+    padding-left: 6rem;
+  }
+
+  &Title {
+    font-size: 48px;
+    -webkit-text-fill-color: transparent;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke: 2px;
+
+    @include desktop {
+      font-size: 64px;
+    }
+  }
+
+  &Link {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    border-bottom: 1px dotted $color-white;
+    padding: 0 10px;
+    transition: all ease-in-out;
+
+    &:hover {
+      padding: 0 15px;
+
+      .text {
+        margin-right: 15px;
+      }
+    }
+
+    .text {
+      margin-right: 10px;
+      font-size: 18px;
+    }
+
+    .icon {
+      width: 24px;
+      height: 24px;
+    }
   }
 }
