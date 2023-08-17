@@ -197,13 +197,13 @@ const Navbar = () => {
                 Deals
               </Link>
             ) : null}
-            <button
+            {session ? <button
               className={clsx(classes.mobileNavItem, classes.btn, classes.btnSecondary)}
               type={'button'}
               onClick={() => signOut()}
             >
               Log out
-            </button>
+            </button> : null}
             {/* <Link className={classes.mobileNavItem} href="/browse">
               Search
             </Link> */}
