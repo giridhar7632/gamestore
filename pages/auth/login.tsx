@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { NextPage } from 'next'
+import { NextPage, GetServerSidePropsContext, InferGetServerSidePropsType } from 'next'
 import Router, { useRouter } from 'next/router'
 import toast from 'react-hot-toast'
 import { FieldValues } from 'react-hook-form'
@@ -9,9 +9,13 @@ import classes from '../../styles/auth.module.scss'
 import { useAuth } from '../../lib/hooks/useAuth'
 import { fetcher } from '../../utils/fetcher'
 import Meta from '../../layout/Meta'
-import { getProviders, getSession } from 'next-auth/react'
+import { getProviders } from "next-auth/react"
+import { getServerSession } from "next-auth/next"
+import { authOptions } from "../api/auth/[...nextauth]"
 
-const Login: NextPage = ({ providers }: any): JSX.Element => {
+const Login: NextPage = ({
+  providers,
+}: InferGetServerSidePropsType<typeof getServerSideProps>): JSX.Element => {
   const { query } = useRouter()
   const { signIn } = useAuth()
   const [signin, setSignin] = useState(true)
@@ -52,6 +56,8 @@ const Login: NextPage = ({ providers }: any): JSX.Element => {
     }
     setLoading(false)
   }
+
+  console.log({providers})
 
   return (
     <div className={classes.authContainer}>
@@ -107,7 +113,7 @@ const Login: NextPage = ({ providers }: any): JSX.Element => {
                   type={'login'}
                   btn={'Sign In'}
                   onFormSubmit={handleCredentials}
-                  providers={Object.values(providers)}
+                  providers={providers && Object.values(providers)}
                   handleProvider={handleProvider}
                   loading={loading}
                   loadingText={'Signing in...'}
@@ -117,7 +123,7 @@ const Login: NextPage = ({ providers }: any): JSX.Element => {
                   type={'register'}
                   btn={'Sign Up'}
                   onFormSubmit={handleSignUp}
-                  providers={Object.values(providers)}
+                  providers={providers && Object.values(providers)}
                   handleProvider={handleProvider}
                   loading={loading}
                   loadingText={'Signing up...'}
@@ -131,20 +137,20 @@ const Login: NextPage = ({ providers }: any): JSX.Element => {
   )
 }
 
-export async function getServerSideProps(context) {
-  const session = await getSession(context)
+export async function getServerSideProps(context: GetServerSidePropsContext) {
+  const session = await getServerSession(context.req, context.res, authOptions)
+
+  // If the user is already logged in, redirect.
+  // Note: Make sure not to redirect to the same page
+  // To avoid an infinite loop!
   if (session) {
-    return {
-      redirect: {
-        permanent: false,
-        destination: '/',
-      },
-    }
+    return { redirect: { destination: "/" } }
   }
+
+  const providers = await getProviders()
+
   return {
-    props: {
-      providers: await getProviders(),
-    },
+    props: { providers: providers ?? [{"id":"google","name":"Google","type":"oauth","signinUrl":"https://gamestore-giridhar7632.vercel.app/api/auth/signin/google","callbackUrl":"https://gamestore-giridhar7632.vercel.app/api/auth/callback/google"}] },
   }
 }
 

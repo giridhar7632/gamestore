@@ -6,15 +6,14 @@ import CredentialsProvider from 'next-auth/providers/credentials'
 import { compare } from 'bcryptjs'
 import prisma from '../../../lib/prisma'
 
-const authHandler: NextApiHandler = (req, res) => NextAuth(req, res, options)
+const authHandler: NextApiHandler = (req, res) => NextAuth(req, res, authOptions)
 export default authHandler
-
-const options: NextAuthOptions = {
+export const authOptions: NextAuthOptions = {
   session: {
     strategy: 'jwt',
   },
   adapter: PrismaAdapter(prisma),
-  secret: process.env.SECRET,
+  secret: process.env.AUTH_SECRET,
   providers: [
     GoogleProvider({
       clientId: process.env.GOOGLE_ID,
